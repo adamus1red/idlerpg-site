@@ -1,22 +1,10 @@
-------------------------------------------
 IRPG Website Code README v1.1 (2004-06-27)
-------------------------------------------
+===
 
------------
-  Notes
------------
+Description
+---
+This is a version of the [IdleRPG site][ois] updated using [bootstrap][bs].
 
-Homepage:	http://idlerpg.net
-License :	Public Domain
-
------------
- Versions
------------
-
-Site:	v0.5 [current/changes courtesy of res0], Released July 17th, 2004.
-Bot :	v3.1.2 [current], Released June 6th, 2004.
-
-------------
 Installation
 ------------
 
@@ -34,9 +22,29 @@ Installation
    and header.php to remove the links to the world map and the quest info page.
    You can also delete the worldmap.php, makeworldmap.php, makemap.php,
    quest.php, and makequestmap.php scripts.
-7. Edit the website ANY WAY you see fit. You don't have to keep all of the links
-   to me, I just thought they might be useful or interesting to users :^)
-8. The best way to receive support for these scripts is to post to the Help
-   section of the forum, http://idlerpg.net/forum.php, not via e-mail or IRC.
-   If you notice a bug, however, you may use any method to contact me.
-   Thanks :^)
+
+Changes
+---
+
+This site differs from the original site source:
+* HTML5 & CSS3
+* Only uses long php tags since short tags that were provided with the original have been disabled in some places I've used sites
+* Per page header CSS
+* Configurable Network Name, Network URL and irc channel link
+* change active page in nav bar depending on what page is being looked at
+* minor cosmetic changes for other pages.
+
+For more changes please see the [original change][ocl] log.
+
+Licensce
+---
+
+The modifications of the original [IdleRPG site source][ois] are licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+
+
+
+
+[ois]: http://idlerpg.net/
+[ocl]: https://raw.github.com/adamus1red/idlerpg-site/01df15980c9e111c04d23ecaa8d7a0b7dd82d912/ChangeLog
+[bs]: http://twitter.github.io/bootstrap/
+
