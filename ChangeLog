@@ -1,0 +1,108 @@
+This is the ChangeLog for the Idle RPG Website Code. I'm not as religious about
+making sure my updates make it here as I am about changes to the IRPG code
+making it into that ChangeLog, so there may be changes between versions that you
+don't see listed here.
+
+Also, please note that any use of "incowrect" or other cow-related "typos" are
+NOT typos. I like cattle. A lot. Please stop fixing them :^)
+
+2004-07-17  Jon Honeycutt  <jotun@idlerpg.net>
+    * huge modification of the entire source by the original coder, res0
+      <bk@slashnet.org>. res0 has really helped this project through his many
+      contributions; it wouldn't be where it is today without him. thanks, res0!
+      * New site layout (valid XHTML 1.1 strict) using CSS
+      * Cleaned up PHP
+      * User maps do not display unless visitor clicks 'display' link
+    * changed fgets() calls to add the optional second parameter (for old PHPs)
+    * removed incorrect header() in makequestmap() (mikegrb)
+    * checked to make sure key $_SESSION['time'] was set before attempting to
+      reference it (HarK0nNeN)
+    * db.php's table tag now specifies the number of rows and columns to make
+      drawing faster in browsers that pay attention to it (res0)
+    * header("Location: ") directives now give full URIs
+    * made better use of htmlentities() and urlencode()s as relates to display
+      of usernames and classes
+    * users on quest and world maps are now clickable, leading to their player
+      info page (John Nielsen)
+
+2004-05-31  Jon Honeycutt  <jotun@idlerpg.net>
+    * changed players.php to show offline users as gray, this style is in
+      header.php, patch from Chewie <chewie@f2o.org>
+    * changed map-drawing PHP scripts to draw a transparent image which is then
+      overlayed (using CSS) over the static newmap.png image. changed the map
+      drawing frequency to 1/user/20s as I think this greatly decreases CPU
+      usage. changed the maperror.png to something more appropriate. $mapx
+      and $mapy in config.php describe the dimensions of your map file (Rick)
+    * fixed quest.php to show proper coordinates; another evil c/p error (Rick)
+
+2004-05-23  Jon Honeycutt  <jotun@idlerpg.net>
+    * changed most everything to make sense with the new database
+    * edited dump.php to display data in the same format, despite the new
+      database format. 
+    * added an xml.php page that takes a 'player' argument and displays
+      information on that user in xml 1.0 format. should allow a better API
+      as far as compatibility with newer dbs goes
+    * changed playerview.php to use fgets() to read from modifiers.txt.
+      hopefully this is much faster
+    * edited playerview.php to show map and XML data link
+    * changed the counter in footer.php to strip the leading path information
+      from $_SERVER['PHP_SELF'] before using it to identify the page
+    * removed some unused $i variable from players.php
+    * created quest.php which shows active quest info
+    * created makequestmap.php which draws a quest map if quest type is 2,
+      redirects otherwise
+    * created worldmap.php which shows the active state of the irpg world
+    * created makeworldmap.php which draws the world map
+    * created makemap.php which takes a 'player' argument and draws them on the
+      map
+    * commonfunctions.php now has functions to sort by isadmin flag and player
+      alignment
+    * index.php updated with information on the new game features
+    * changed titles on several pages to use $irpg_chan instead of hard-coded
+      #G7
+    * updated header.php to link to new pages and idlerpg.net forum
+    * changed 'time modifiers' to 'character modifiers' as item modifiers are
+      now stored, also
+
+2004-05-23  Alexander Hirzel  <chewie@f2o.org>
+    * submitted a series of patches to correct, among other things, the horrible
+      use of <td> where <th> was more appropriate
+
+2004-04-22  Jon Honeycutt  <jotun@idlerpg.net>
+	* if $_GET['alltime'] wasn't set, < and > in time modifiers were not
+	  translated to &lt; and &gt; (thanks DinTx)
+	* attempted to fix playerview.php from showing others' stats, traded
+	  stristr() for strstr() matching either "^name ", " name ", or "^name's "
+
+2004-04-23  Jonathan Attwell <caffeen@caffeen.org>
+	* created README, detailing how users are to install and what to edit.
+	* created config.php, which holds all the setup variables.
+	* cleaned up some of the php coding.
+
+2004-04-15  Jon Honeycutt  <jotun@ultrazone.org>
+	* we now stripslashes() on $_GET['player'] for players.php,
+	  playerview.php, dump.php (thanks Diab)
+
+2004-04-05  Jon Honeycutt  <jotun@ultrazone.org>
+	* removed some of parallax's tabs :^)
+	* edited players.php to forward requests for specific players to the proper
+	  playerview.php
+	* changed links in sitesource.php to be fully-qualified
+	* removed preg_grep in playerview.php, which insecurely used tainted
+	  data. switched to stristr. (thanks mike@ethernal.org)
+	* stripped < and > from modifiers.txt output (thanks mike@ethernal.org)
+	* changed link to idlerpg-adv.txt in players.php to be fully-qualified.
+	  (thanks daxxar)
+	* may've made other changes, not sure.
+
+2004-02-15  Jon Honeycutt  <jotun@ultrazone.org>
+	* edited source.php to provide fully-qualified URLs to source files;
+	  easier for users to follow license.
+	* playerview.php's 'View all Time Modifiers' link now displays the
+	  number of time modifiers.
+	* contact.php now sends a From: field in its headers parameter.
+
+2004-01-31  Titus Barik  <titus@barik.net>
+	* created ChangeLog, following Debian ChangeLog format.
+	* modified header.php to be location independent via $BASE_URL var.
+	* players.php and playerview.php are now separate files.

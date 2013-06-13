@@ -1,0 +1,111 @@
+body { 
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    background-color: #FFFFF0;
+    color: black;
+    margin: 10px;
+    text-align: justify;
+}
+
+h1 { margin-bottom: 0px; margin-top: 0px; }
+h2 { margin-bottom: 0px; }
+
+p.small { margin: 0px; font-size: smaller; }
+
+a { text-decoration: none; color: #C69500; }
+a:hover { text-decoration: underline; color: black; }
+
+div.head {
+   border: 1px solid #c0c0c0;
+   text-align: left;
+   width: 100%;
+   margin-bottom: 10px;
+   background: #FFFFFF;
+}
+
+div.menu {
+   width: 120px;
+   position: relative;
+   float: left;
+   border: 1px solid #c0c0c0;
+   background: #FFFFFF;
+}
+div#menu a.home { color: #000000; background: #c0c0c0; border: 1px solid #000000; }
+div#menu a.home:hover { background: #c0c0c0; border: 1px solid #000000; }
+div#menu a {
+   text-align: center;
+   width: 118px;
+   margin: 0px;
+   display: block;
+   border: 1px solid #FFFFFF
+}
+
+div#menu a:hover { border: 1px solid #000000; background: #c0c0c0; text-decoration: none; }
+
+div.content {
+   border: 1px solid #c0c0c0; 
+   margin-left: 130px;
+   margin-top: 0px;
+   padding: 10px;
+   background: #FFFFFF;
+}
+
+div.footer {
+   border: 1px solid #c0c0c0; 
+   margin-left: 130px;
+   margin-top: 10px;
+   padding: 10px;
+   background: #FFFFFF;
+}
+
+
+table.uniques {
+   border: 1px solid #c0c0c0;
+   padding: 5px;
+   text-align: left;
+}
+table.uniques td {
+   padding-left: 10px;
+}
+   
+table.penalty {
+   border: 1px solid #c0c0c0;
+   padding: 5px;
+   text-align: left;
+}
+table.penalty th {
+   text-align: right;
+}
+table.penalty td {
+
+}
+
+/* Styles for the userlist */
+li.online { font-weight: bold; }
+li.offline { color: #c0c0c0; }
+a.offline { color: #707070; }
+#map {
+    width: 500px;
+    height: 500px;
+    background-image: url(newmap.png);
+}
+
+
+table.forum {
+    border: 1px solid #c0c0c0;
+    table-layout: fixed;
+    overflow: auto;
+}
+
+table.forum td,tr,caption,thead,tfoot,th {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tdblue { background-color: #ffffdf; }
+.tdgray { background-color: #eeeee0; }
+.tdred {
+    border: 1px solid red;
+    background-color: #FFCCCC;
+}
+.smallest {
+    font-size: 11px;
+}

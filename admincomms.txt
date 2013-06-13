@@ -1,0 +1,65 @@
+This is not the full list of commands for the Idle RPG bot, but only the list
+of admin commands. For more information on the Idle RPG bot, visit
+http://idlerpg.net/
+
+INFO, retrieve some fairly useless stats about the bot.
+
+DIE, kills the bot.
+
+HOG, summon the Hand of God spell. See the main help file.
+
+RESTART, restarts the bot.
+
+CHPASS <char name> <new password>, change a character's pass in the IRPG.
+
+CHCLASS <char name> <new class name>, change a character's class in the IRPG.
+
+CHUSER <char name> <new char name>, change a character's username in the IRPG.
+     Please only use in very special circumstances; otherwise, have them form
+     a new player and DEL the old one. This should not let you overwrite an
+     existing account, but is untested.
+
+PUSH <char name> <seconds>, push a player toward his goal by subtracting time
+     from his next time to level. Please use this only if bot has mistakenly
+     penalized someone. You could also use this to punish a user by setting
+     the number of seconds to a negative number. Don't do that.
+
+DEL <char name>, remove a user's account.
+
+JUMP <server[:port]>, move the bot to another server.
+
+SILENT <mode>, switch bot between 4 modes of silence.
+     - mode 0, bot sends all privmsgs.
+     - mode 1, only chanmsg() is disabled.
+     - mode 2, only privmsg()/notice() to non-channels is disabled.
+     - mode 3, privmsgs/notices to users and channels are disabled.
+
+BACKUP, tell bot to copy $opts{'dbfile'} to .dbbackup/$opts{'dbfile'}TIMESTAMP
+
+RELOADDB, force bot to reload player database file, rewriting all memory.
+     RELOADDB can only be used while in pause mode.
+
+PAUSE, toggle pause mode.
+
+PEVAL <code>, execute arbitrary argument as Perl code. Queues output > 3 lines
+     or >1k of text. Some useful PEVAL commands:
+       - Delete all accounts not logged in in 4 weeks (See also: DELOLD):
+         /msg bot PEVAL delete $rps{$_} for grep { time()-$rps{$_}{lastlogin} > 3600*24*7*4 && !$rps{$_}{online} } keys %rps;
+       - Remove one hour from everyone's clocks:
+         /msg bot PEVAL $rps{$_}{next} -= 3600 for keys %rps;
+       - List all online users, separated by commas:
+         /msg bot PEVAL join(', ',grep { $rps{$_}{online} } keys %rps);
+       - View contents of a file on remote host:
+         /msg bot peval `cat file`
+       - Turn on debug mode:
+         /msg bot peval $opts{debug}=1;
+       - Force write-out of database:
+         /msg bot peval writedb();
+
+DELOLD <days>, remove all non-logged-in accounts inactive in the last <days>
+     days.
+
+CLEARQ, clear the outgoing message queue. Useful to use if someone floods the
+     bot with a lot of text that it plans to respond to.
+
+MKADMIN <username>, set the isadmin flag for a given username.
