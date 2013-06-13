@@ -18,13 +18,13 @@ include("header.php");
         <form method="post" action="contact.php">
           <table border="0">
             <tr>
-              <th align="left"><label for="from">Your e-mail address</label>:</th>
+              <th align="left"><label for="from">Your e-mail address</label></th>
               <td align="right">
                 <input type="text" size="20" maxlength="50" name="from" id="from" />
               </td>
             </tr>
             <tr>
-              <th align="left"><label for="name">Your name</label>:</th>
+              <th align="left"><label for="name">Your name</label></th>
               <td align="right">
                 <input type="text" size="20" maxlength="50" name="name" id="name" />
               </td>
@@ -36,7 +36,7 @@ include("header.php");
             </tr>
             <tr>
               <td colspan="2" align="right">
-                <input type="submit" value="Send" />
+                <input type="submit" class="btn btn-success" value="Send" />
               </td>
             </tr>
           </table>
