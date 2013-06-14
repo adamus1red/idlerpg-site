@@ -85,7 +85,7 @@
 if ($enable_analytics == True) {
 echo "  <script type="text/javascript">\n";
 echo "  var _gaq = _gaq || [];\n";
-echo "  _gaq.push(['_setAccount', '"$analytics_tracking_code;']);\n";
+echo "  _gaq.push(['_setAccount', '"$analytics_tracking_code']);\n";
 echo "  _gaq.push(['_setDomainName', '$analytics_tracking_domain']);\n";
 echo "  _gaq.push(['_trackPageview']);\n";
 echo "  (function() {\n";
