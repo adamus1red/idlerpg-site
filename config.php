@@ -36,7 +36,21 @@ $mapx = 500;
 // length-wise dimension of your map file
 $mapy = 500;
 
+// Full Netowk Name
 $net_name = "MyNetwork";
+
+// Full network homepage url
 $net_url = "http://mynetwork-url.org/";
+
+// Full url for your idlerpg channel.
 $irpg_chan_url = "irc://irc.meynetwork-url.org/idlerpg";
+
+// Enable google analytics
+$enable_analytics = False;
+
+// Google Analytics tracking ID
+$analytics_tracking_code = "";
+
+// Google Analytics domain to track (This is nessisary for the new style google analytics tracking code)
+$analytics_tracking_domain = "";
 ?>
