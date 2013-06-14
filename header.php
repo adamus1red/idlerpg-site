@@ -81,7 +81,7 @@
     </style>
   </head>
   <body>
-
+    <?php include_once("analytics.php") ?>
     <!-- Idle RPG Logo -->
     
         
