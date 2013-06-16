@@ -30,6 +30,9 @@ $irpg_logo="idlerpg.png";
 // is http://jotun.ultrazone.org/g7/, so it's "/g7/"
 $BASEURL="/g7/";
 
+// Choose your theme. Currently only classic and default is supported
+$style = "classic";
+
 // width-wise dimension of your map file
 $mapx = 500;
 
