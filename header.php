@@ -27,8 +27,8 @@
             }
         }
         <?php 
-        if ($BASEURL . 'index.php' ==  $_SERVER['PHP_SELF']) {
-            echo "        <!-- index styles -->\n";
+        if ($_SERVER['PHP_SELF'] == $BASEURL . 'index.php') {
+            echo "        /* index styles */\n";
             echo "        table.uniques {\n";
             echo "          border: 1px solid #c0c0c0;\n";
             echo "          padding: 5px;\n";
@@ -46,10 +46,8 @@
             echo "            text-align: right;\n";
             echo "        }\n";
         }
-        ?>
-        <?php
-        if (($BASEURL . 'playerview.php' || $BASEURL . 'players.php') ==  $_SERVER['PHP_SELF']) {
-            echo "        <!-- player page -->\n";
+        if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+            echo "       /* player page */\n";
             echo "        li.online { font-weight: bold; }\n";
             echo "        li.offline { color: #c0c0c0; }\n";
             echo "        a.offline { color: #707070; }\n";
@@ -79,22 +77,20 @@
         }
         ?>
     </style>
+    <?php
+    if ($enable_analytics == True) {
+    echo "    <script>\n";
+    echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
+    echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
+    echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
+    echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
+    echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
+    echo "        ga('send', 'pageview');\n";
+    echo "    </script>\n";
+    }?>
   </head>
   <body>
-<?php
-if ($enable_analytics == True) {
-echo "<script>\n";
-echo "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
-echo "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
-echo "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
-echo "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
-echo "ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
-echo "ga('send', 'pageview');\n";
-echo "</script>\n";
-}?>
-    <!-- Idle RPG Logo -->
-    
-        
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
