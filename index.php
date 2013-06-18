@@ -13,7 +13,7 @@
     <h2>Location</h2>
     <p> 
       The Idle RPG can be played on the
-      <a href="<?php echo $net_url;?>"><?php echo $net_name;?></a> in the
+      <a href="<?php echo $net_url;?>"><?php echo $net_name;?>Network</a> in the
       channel <?php echo $irpg_chan;?>.
     </p>
     
