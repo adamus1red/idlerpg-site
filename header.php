@@ -73,7 +73,7 @@
             echo "        .smallest {\n";
             echo "            font-size: 11px;\n";
             echo "        }\n";
-        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'worldmap.php') {
             echo "        #map {\n";
             echo "            width: 500px;\n";
             echo "            height: 500px;\n";
