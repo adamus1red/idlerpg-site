@@ -45,8 +45,7 @@
             echo "        table.penalty th {\n";
             echo "            text-align: right;\n";
             echo "        }\n";
-        }
-        if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
             echo "       /* player page */\n";
             echo "        li.online { font-weight: bold; }\n";
             echo "        li.offline { color: #c0c0c0; }\n";
@@ -73,6 +72,12 @@
             echo "        }\n";
             echo "        .smallest {\n";
             echo "            font-size: 11px;\n";
+            echo "        }\n";
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+            echo "        #map {\n";
+            echo "            width: 500px;\n";
+            echo "            height: 500px;\n";
+            echo "            background-image: url(newmap.png);\n";
             echo "        }\n";
         }
         ?>
