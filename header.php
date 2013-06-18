@@ -6,8 +6,8 @@
     <title><?php echo $irpg_chan;?> Idle RPG: <?php echo $irpg_page_title;?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style.css" media="screen">
-    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>/theme/<?php echo $style;?>/css/style.css" media="screen">
+    <link href="<?php echo $BASEURL;?>/theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
@@ -74,6 +74,12 @@
             echo "            font-size: 11px;\n";
             echo "        }\n";
         } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+            echo "        #map {\n";
+            echo "            width: 500px;\n";
+            echo "            height: 500px;\n";
+            echo "            background-image: url(newmap.png);\n";
+            echo "        }\n";
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'playerview.php') {
             echo "        #map {\n";
             echo "            width: 500px;\n";
             echo "            height: 500px;\n";
