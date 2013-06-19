@@ -119,7 +119,18 @@
               <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>worldmap.php">World Map</a></li>
               <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>quest.php">Quest Info</a></li>
               <!--<li<?php if ($BASEURL . 'thanks.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>thanks.php">Thanks</a></li>-->
-            </ul>
+              <li class="dropdown<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " active";}?>">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Other <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li role="presentation" class=""><a role="menuitem" tabindex="-1" href="#">Built With:</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://ruby.org">Ruby</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="htt://php.org">PHP</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://idlerpg.net">Jotun</a></li>
+                  <li role="presentation" class="divider">More</li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/adamus1red/irpg-site/">Site Source</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.digitalirc.org/">Digital IRC Network</a></li>
+                </ul>
+              </li>
           </div><!--/.nav-collapse -->
         </div>
       </div>
