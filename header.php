@@ -28,7 +28,11 @@ Based on a work at http://idlerpg.net/.
         .container > hr {
             margin: 60px 0;
         }
+        .navbar-inner {
+            margin: 0 auto;
+            max-width: 1000px;
         }
+        
         <!-- responsive stuff -->
         @media (max-width: 980px) {
         /* Enable use of floated navbar text */
