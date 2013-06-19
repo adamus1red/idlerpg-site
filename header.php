@@ -1,5 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN"
-        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!--
+IdleRPG Website by adamus1red is licensed under a 
+Creative Commons Attribution-NonCommercial-ShareAlike 
+3.0 Unported License.
+Based on a work at http://idlerpg.net/.
+-->
 
 <html>
   <head>
@@ -86,19 +92,18 @@
             echo "            background-image: url(newmap.png);\n";
             echo "        }\n";
         }
+        echo "    </style>\n";
+        if ($enable_analytics == True) {
+            echo "    <script>\n";
+            echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
+            echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
+            echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
+            echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
+            echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
+            echo "        ga('send', 'pageview');\n";
+            echo "    </script>\n";
+        }
         ?>
-    </style>
-    <?php
-    if ($enable_analytics == True) {
-    echo "    <script>\n";
-    echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
-    echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
-    echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
-    echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
-    echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
-    echo "        ga('send', 'pageview');\n";
-    echo "    </script>\n";
-    }?>
   </head>
   <body>
 
@@ -119,18 +124,6 @@
               <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>worldmap.php">World Map</a></li>
               <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>quest.php">Quest Info</a></li>
               <!--<li<?php if ($BASEURL . 'thanks.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>thanks.php">Thanks</a></li>-->
-              <li class="dropdown<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " active";}?>">
-                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Other <b class="caret"></b></a>
-                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-                  <li role="presentation" class=""><a role="menuitem" tabindex="-1" href="#">Built With:</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://ruby.org">Ruby</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="htt://php.org">PHP</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://idlerpg.net">Jotun</a></li>
-                  <li role="presentation" class="divider">More</li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/adamus1red/irpg-site/">Site Source</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.digitalirc.org/">Digital IRC Network</a></li>
-                </ul>
-              </li>
           </div><!--/.nav-collapse -->
         </div>
       </div>
