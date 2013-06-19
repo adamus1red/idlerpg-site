@@ -10,7 +10,7 @@
     }
     $_SESSION['time']=time();
 
-    $map = imageCreate(500,500);
+    $map = imageCreate($mapx,$mapy);
     $magenta = ImageColorAllocate($map, 255, 0, 255);
     $blue = imageColorAllocate($map, 0, 128, 255);
     $red = imageColorAllocate($map, 211, 0, 0);
