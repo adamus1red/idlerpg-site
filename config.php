@@ -36,6 +36,9 @@ $mapx = 500;
 // length-wise dimension of your map file
 $mapy = 500;
 
+// Style
+$style = "classic";
+
 // Full Netowk Name
 $net_name = "Digital IRC";
 
@@ -43,7 +46,7 @@ $net_name = "Digital IRC";
 $net_url = "http://digitalirc.org/";
 
 // Full url for your idlerpg channel.
-$irpg_chan_url = "irc://irc.digitalirc.org/".$irpg.chan;
+$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan;
 
 // Enable google analytics
 $enable_analytics = False;
