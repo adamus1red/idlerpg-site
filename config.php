@@ -4,10 +4,10 @@ $admin_email="you@example.com";
 $admin_nick="YourNick";
 
 // nickname of your bot
-$irpg_bot="IdleBot";
+$irpg_bot="IdleRPG";
 
 // your game's server
-$irpg_network="irc.yournet.org";
+$irpg_network="irc.digitalirc.org";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
@@ -15,20 +15,20 @@ $irpg_chan="#IdleRPG";
 // full or relative pathname to the DBs:
 
 // character database
-$irpg_db="/home/YourNick/idlerpg/irpg.db";
+$irpg_db="/home/idlerpg/idlerpg/irpg.db";
 
 // time modifiers file
-$irpg_mod="/home/YourNick/idlerpg/modifiers.txt";
+$irpg_mod="/home/idlerpg/idlerpg/modifiers.txt";
 
 // active quest info file
-$irpg_qfile="/home/YourNick/idlerpg/questinfo.txt";
+$irpg_qfile="/home/idlerpg/idlerpg/questinfo.txt";
 
 // image to use for the top logo
 $irpg_logo="idlerpg.png";
 
 // directory in which your site is located from the root directory. my site
 // is http://jotun.ultrazone.org/g7/, so it's "/g7/"
-$BASEURL="/g7/";
+$BASEURL="/";
 
 // width-wise dimension of your map file
 $mapx = 500;
@@ -37,13 +37,13 @@ $mapx = 500;
 $mapy = 500;
 
 // Full Netowk Name
-$net_name = "MyNetwork";
+$net_name = "Digital IRC";
 
 // Full network homepage url
-$net_url = "http://mynetwork-url.org/";
+$net_url = "http://digitalirc.org/";
 
 // Full url for your idlerpg channel.
-$irpg_chan_url = "irc://irc.meynetwork-url.org/idlerpg";
+$irpg_chan_url = "irc://irc.digitalirc.org/".$irpg.chan;
 
 // Enable google analytics
 $enable_analytics = False;
