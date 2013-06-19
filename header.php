@@ -28,7 +28,7 @@ Based on a work at http://idlerpg.net/.
         .container > hr {
             margin: 60px 0;
         }
-        .navbar-inner {
+        .container-fluid {
             margin: 0 auto;
             max-width: 1000px;
         }
