@@ -17,8 +17,8 @@
     ImageColorTransparent($map, $magenta);
     while ($line=fgets($file)) {
         list(,,,,,,,,$online,,$x,$y) = explode("\t",trim($line));
-        if ($online == 1) imageFilledEllipse($map, $x, $y, 3, 3, $blue);
-        else imageFilledEllipse($map, $x, $y, 3, 3, $red);
+        if ($online == 1) imageFilledEllipse($map, $x, $y, 6, 6, $blue);
+        else imageFilledEllipse($map, $x, $y, 6, 6, $red);
     }
     header("Content-type: image/png");
     imagePNG($map);
