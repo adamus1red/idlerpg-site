@@ -1,13 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN"
-        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!--
+IdleRPG Website by adamus1red is licensed under a 
+Creative Commons Attribution-NonCommercial-ShareAlike 
+3.0 Unported License.
+Based on a work at http://idlerpg.net/.
+-->
 
 <html>
   <head>
     <title><?php echo $irpg_chan;?> Idle RPG: <?php echo $irpg_page_title;?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>css/bootstrap.min.css" media="screen">
-    <link href="<?php echo $BASEURL;?>css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style.css" media="screen">
+    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
@@ -16,7 +22,17 @@
         }-->
         .container {
             padding-top: 60px;
+            margin: 0 auto;
+            max-width: 1000px;
         }
+        .container > hr {
+            margin: 60px 0;
+        }
+        .container-fluid {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        
         <!-- responsive stuff -->
         @media (max-width: 980px) {
         /* Enable use of floated navbar text */
@@ -45,8 +61,7 @@
             echo "        table.penalty th {\n";
             echo "            text-align: right;\n";
             echo "        }\n";
-        }
-        if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
             echo "       /* player page */\n";
             echo "        li.online { font-weight: bold; }\n";
             echo "        li.offline { color: #c0c0c0; }\n";
@@ -74,20 +89,31 @@
             echo "        .smallest {\n";
             echo "            font-size: 11px;\n";
             echo "        }\n";
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'worldmap.php') {
+            echo "        #map {\n";
+            echo "            width: 500px;\n";
+            echo "            height: 500px;\n";
+            echo "            background-image: url(newmap.png);\n";
+            echo "        }\n";
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'playerview.php') {
+            echo "        #map {\n";
+            echo "            width: 500px;\n";
+            echo "            height: 500px;\n";
+            echo "            background-image: url(newmap.png);\n";
+            echo "        }\n";
+        }
+        echo "    </style>\n";
+        if ($enable_analytics == True) {
+            echo "    <script>\n";
+            echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
+            echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
+            echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
+            echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
+            echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
+            echo "        ga('send', 'pageview');\n";
+            echo "    </script>\n";
         }
         ?>
-    </style>
-    <?php
-    if ($enable_analytics == True) {
-    echo "    <script>\n";
-    echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
-    echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
-    echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
-    echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
-    echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
-    echo "        ga('send', 'pageview');\n";
-    echo "    </script>\n";
-    }?>
   </head>
   <body>
 
@@ -108,7 +134,6 @@
               <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>worldmap.php">World Map</a></li>
               <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>quest.php">Quest Info</a></li>
               <!--<li<?php if ($BASEURL . 'thanks.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>thanks.php">Thanks</a></li>-->
-            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>

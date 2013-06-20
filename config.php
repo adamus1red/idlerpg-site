@@ -15,6 +15,15 @@ $irpg_chan="#IdleRPG";
 // full or relative pathname to the DBs:
 
 // character database
+<<<<<<< HEAD
+$irpg_db="/home/idlerpg/bot.v3.1.2/irpg.db";
+
+// time modifiers file
+$irpg_mod="/home/idlerpg/bot.v3.1.2/modifiers.txt";
+
+// active quest info file
+$irpg_qfile="/home/idlerpg/bot.v3.1.2/questinfo.txt";
+=======
 $irpg_db="/home/idlerpg/idlerpg/irpg.db";
 
 // time modifiers file
@@ -22,6 +31,7 @@ $irpg_mod="/home/idlerpg/idlerpg/modifiers.txt";
 
 // active quest info file
 $irpg_qfile="/home/idlerpg/idlerpg/questinfo.txt";
+>>>>>>> master
 
 // image to use for the top logo
 $irpg_logo="idlerpg.png";
@@ -36,14 +46,17 @@ $mapx = 500;
 // length-wise dimension of your map file
 $mapy = 500;
 
+// Style
+$style = "classic";
+
 // Full Netowk Name
 $net_name = "Digital IRC";
 
 // Full network homepage url
 $net_url = "http://digitalirc.org/";
 
-// Full url for your idlerpg channel.
-$irpg_chan_url = "irc://irc.digitalirc.org/".$irpg.chan;
+// Full url for your idlerpg channel
+$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan;
 
 // Enable google analytics
 $enable_analytics = False;

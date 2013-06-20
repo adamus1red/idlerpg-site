@@ -16,7 +16,7 @@
     fgets($file);
     while($location=fgets($file)) {
         list($who,,,,,,,,,,$x,$y) = explode("\t",trim($location));
-        print "        <area shape=\"circle\" coords=\"".$x.",".$y.",4\" alt=\"".htmlentities($who).
+        print "        <area shape=\"circle\" coords=\"".$x.",".$y.",6\" alt=\"".htmlentities($who).
               "\" href=\"playerview.php?player=".urlencode($who)."\" title=\"".htmlentities($who)."\" />\n";
     }
     fclose($file);
