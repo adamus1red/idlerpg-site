@@ -65,9 +65,9 @@
              "      <b>Alignment:</b> ".($alignment=='e'?"Evil":($alignment=='n'?"Neutral":"Good"))."<br />\n".
              "      <b>XML:</b> [<a href=\"xml.php?player=".urlencode($user)."\">link</a>]</p>\n".
              "</summary>\n".
-             "<details>\n".
              "    <h2>Map</h2>\n".
              "    ".($showmap?"<div id=\"map\"><img src=\"makemap.php?player=".urlencode($user)."\"></div>\n\n":"<p><a href=\"?player=".urlencode($user)."&showmap=1\">Show map</a></p>\n\n")."".
+             "<details>\n".
              "    <h2>Items</h2>\n<p>";
         ksort($item);
         $sum = 0;
