@@ -1,4 +1,4 @@
-IRPG Website Code README v1.1 (2004-06-27)
+IRPG Website Code v1.2 (22/06/13)
 ===
 
 Description
@@ -23,6 +23,11 @@ Installation
    You can also delete the worldmap.php, makeworldmap.php, makemap.php,
    quest.php, and makequestmap.php scripts.
 
+Theme Creation
+--------------
+
+Currently to create a theme you need to either use the [twitter bootstrap customiser][bsc] (suggested), or take one of the provided themes and modify the content of that with a text editor.
+
 Changes
 ---
 
@@ -41,10 +46,7 @@ Licensce
 
 The modifications of the original [IdleRPG site source][ois] are licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-
-
-
 [ois]: http://idlerpg.net/
 [ocl]: https://raw.github.com/adamus1red/idlerpg-site/01df15980c9e111c04d23ecaa8d7a0b7dd82d912/ChangeLog
 [bs]: http://twitter.github.io/bootstrap/
-
+[bsc]: http://twitter.github.io/bootstrap/customize.html#variables
