@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 IRPG Website Code v1.2 (22/06/13)
+=======
+IRPG Website Code (21/06/13)
+>>>>>>> master
 ===
 
 Description
@@ -50,3 +54,7 @@ The modifications of the original [IdleRPG site source][ois] are licensed under 
 [ocl]: https://raw.github.com/adamus1red/idlerpg-site/01df15980c9e111c04d23ecaa8d7a0b7dd82d912/ChangeLog
 [bs]: http://twitter.github.io/bootstrap/
 [bsc]: http://twitter.github.io/bootstrap/customize.html#variables
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
