@@ -14,10 +14,10 @@ Based on a work at http://idlerpg.net/.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
         if ($style == null) {
-            echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/classic/css/style.css" media="screen">\n'.
+            echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/classic/css/style.css" media="screen">'."\n".
                  '    <link href="'.$BASEURL.'theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">';
         } else {
-            echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/'.$style.'/css/style.css" media="screen">\n'.
+            echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/'.$style.'/css/style.css" media="screen">'."\n".
                  '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-responsive.css" rel="stylesheet" media="screen">';
         }
     ?>
