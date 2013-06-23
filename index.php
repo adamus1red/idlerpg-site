@@ -358,7 +358,7 @@
         </tr>
       </table>
     
-    <h2>The Hand of God</h2>
+    <h2 name="HandOfGod">The Hand of God</h2>
     
       <p>As of v3.0, every online user has a (roughly) 1/20 chance per day
       of a "Hand of God" affecting them. A HoG can help or hurt your character
@@ -383,7 +383,7 @@
       to level.</p>
     
 
-    <h2>Team Battles</h2>
+    <h2 name="TeamBattle">Team Battles</h2>
     
       <p>As of v3.0, every online user has (roughly) 1/4 chance per day of
       being involved in a  'team battle.' Team battles pit three online
@@ -457,23 +457,6 @@
       item from the challengee. Only items of a higher value are stolen, and
       the challenger's old item is given to the challengee in a moment of pity.
       </p>
-    
-
-
-    <h2>Credits</h2>
-    
-      <p>Many thanks to version 3.0's map creators, res0 and Jeb! The game
-      wouldn't be the same without you.</p>
-      <p>
-        The IRPG would not be possible without help from a lot of people.
-        To jwbozzy, yawnwraith, Tosirap, res0, dwyn, Parallax, protomek,
-        Bert, clavicle, drdink, jeff, rasher, Sticks, Nerje, Asterax,
-        emad, inkblot(!), schmolli, mikegrb, mumkin, sean, Minhiriath,
-        and Dan, I give many thanks. Unfortunately, this list has grown too
-        large to maintain. More user contributions can be seen in the
-        <a href="http://idlerpg.net/ChangeLog.txt">ChangeLog</a>.
-      </p>
-    
 
 <?php include("footer.php");?>
 
