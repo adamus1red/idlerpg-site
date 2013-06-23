@@ -1,7 +1,5 @@
-
-IRPG Website Code v1.2 (22/06/13)
-=======
-
+IRPG Website Code v1.3 (22/06/13)
+===
 
 Description
 ---
@@ -36,10 +34,12 @@ Changes
 This site differs from the original site source:
 * HTML5 & CSS3
 * Only uses long php tags since short tags that were provided with the original have been disabled in some places I've used sites
-* Per page header CSS
+* Per-page header CSS
 * Configurable Network Name, Network URL and irc channel link
 * change active page in nav bar depending on what page is being looked at
 * minor cosmetic changes for other pages.
+* Ability to add themes
+* cleaner looking playerview page
 
 For more changes please see the [original change][ocl] log.
 
