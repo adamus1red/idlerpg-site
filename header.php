@@ -16,7 +16,7 @@ Based on a work at http://idlerpg.net/.
         if ($style == null) {
             echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/classic/css/style.css" media="screen">\n'.
                  '    <link href="'.$BASEURL.'theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">';
-        } else {     
+        } else {
             echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/'.$style.'/css/style.css" media="screen">\n'.
                  '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-responsive.css" rel="stylesheet" media="screen">';
         }
