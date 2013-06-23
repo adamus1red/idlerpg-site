@@ -19,6 +19,7 @@ Based on a work at http://idlerpg.net/.
         } else {     
             echo '    <link rel="stylesheet" type="text/css" href=". $BASEURL .theme/. $style ./css/style.css" media="screen">\n'.
                  '    <link href=". $BASEURL .theme/. $style ./css/style-responsive.css" rel="stylesheet" media="screen">';
+        }
     ?>
     <style type="text/css">
         <!-- Global Styles -->
