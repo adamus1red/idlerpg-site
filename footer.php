@@ -3,9 +3,7 @@
     <div class="footer">
         <div class="container">
         <p class="pull-right">Made with <a href="http://php.net/">php</a>, <a href="http://twitter.github.io/bootstrap/">bootstrap</a> and <a href="<?php echo $net_url;?>"><?php echo $net_name;?></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a> Using <?php echo $style;?> theme.</p>
-        <p>
-            Questions? Comments? Suggestions? Bugs? Naked pics?
-            <a href="contact.php">contact us</a> or <a href="<?php echo $irpg_chan_url;?>">join the IRC</a>.
+        <p><a href="contact.php">contact us</a> or <a href="<?php echo $irpg_chan_url;?>">join the IRC</a>.
 <?php
             $hits = file("hits.db");
             $fp = fopen("hits.db", "w");
@@ -35,7 +33,7 @@
         </p>
         </div>
     </div>
-    <script src="<?php echo $BASEURL;?>/theme/<?php echo $style;?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo $BASEURL;?>js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery.js"></script>
     </body>
 </html>
