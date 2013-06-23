@@ -12,13 +12,8 @@ Based on a work at http://idlerpg.net/.
     <title><?php echo $irpg_chan;?> Idle RPG: <?php echo $irpg_page_title;?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        if ($style == null) {
-            echo "    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/classic/css/style.css" media="screen">\n".
-                 "    <link href="<?php echo $BASEURL;?>theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">".
-        } else {     
-            echo "    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style.css" media="screen">\n".
-                 "    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">".
+    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style.css" media="screen">
+    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
