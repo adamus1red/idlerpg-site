@@ -51,7 +51,7 @@
         $class=htmlentities($class);
         /* if we htmlentities($user), then we cannot use links with it. */
         echo "<summary>\n".
-             "      <p class=\"lead\"><b>User:</b> ".htmlentities($user)."<br />\n".
+             "      <p><span class=\"lead\"><b>User:</b> ".htmlentities($user)."</span><br />\n".
              "      <b>Class:</b> $class<br />\n".
              "      <b>Admin?:</b> ".($isadmin?"Yes":"No")."<br />\n".
              "      <b>Level:</b> $level<br />\n".
