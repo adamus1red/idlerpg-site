@@ -15,10 +15,10 @@ Based on a work at http://idlerpg.net/.
     <?php
         if ($style == null) {
             echo "    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/classic/css/style.css" media="screen">\n".
-                 "    <link href="<?php echo $BASEURL;?>theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">".
+                 "    <link href="<?php echo $BASEURL;?>theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">";
         } else {     
             echo "    <link rel="stylesheet" type="text/css" href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style.css" media="screen">\n".
-                 "    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">".
+                 "    <link href="<?php echo $BASEURL;?>theme/<?php echo $style;?>/css/style-responsive.css" rel="stylesheet" media="screen">";
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
