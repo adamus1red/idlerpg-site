@@ -1,4 +1,4 @@
-IRPG Website Code v1.3 (22/06/13)
+IRPG Website Code v1.3.2 (24/06/13)
 ===
 
 Description
@@ -11,7 +11,7 @@ Installation
 1. Make sure you have the bot functional and running.
 2. Copy all the files here to your public_html or some folder.
 3. Edit config.php with your favorite editor.
-4. chmod 644 * && chmod 666 hits.db
+4. chmod 644 * && chmod 777 hits.db
 5. If you change the default settings in the IRPG bot (for example, if you turn
    off the option to write quest info to file, you'll have to manually edit
    some scripts to take this into account. If you disable the INFO command,
@@ -38,7 +38,7 @@ This site differs from the original site source:
 * Configurable Network Name, Network URL and irc channel link
 * change active page in nav bar depending on what page is being looked at
 * minor cosmetic changes for other pages.
-* Ability to add themes
+* Ability to add themes!
 * cleaner looking playerview page
 
 For more changes please see the [original change][ocl] log.
