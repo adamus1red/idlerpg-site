@@ -8,7 +8,7 @@
         if ($style == null) {
             echo '        Using classic theme.</p>';
         } else {
-            echo '        Using '.$style.'theme.</p>';
+            echo '        Using '.$style.' theme.</p>';
         }
         ?>
         <p><a href="contact.php">contact us</a> or <a href="<?php echo $irpg_chan_url;?>">join the IRC</a>.
