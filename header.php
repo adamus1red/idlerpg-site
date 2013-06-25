@@ -21,7 +21,6 @@ Based on a work at http://idlerpg.net/.
                  '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-responsive.css" rel="stylesheet" media="screen">';
         }
     ?>
-
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
@@ -124,7 +123,6 @@ Based on a work at http://idlerpg.net/.
         ?>
   </head>
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
