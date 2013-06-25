@@ -11,7 +11,7 @@ $irpg_network="irc.digitalirc.org";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
-
+$irpg_chan_clean = str_replace('#', '', $irpg_chan);
 // full or relative pathname to the DBs:
 
 // character database
@@ -46,7 +46,7 @@ $net_name = "Digital IRC";
 $net_url = "http://digitalirc.org/";
 
 // Full url for your idlerpg channel
-$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan;
+$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan_clean;
 
 // Enable google analytics
 $enable_analytics = False;
