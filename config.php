@@ -11,7 +11,7 @@ $irpg_network="irc.digitalirc.org";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
-
+$irpg_chan_clean = str_replace('#', '', $irpg_chan);
 // full or relative pathname to the DBs:
 
 // character database
@@ -36,7 +36,7 @@ $mapx = 500;
 // length-wise dimension of your map file
 $mapy = 500;
 
-// Style
+// What Style to use. Styles this ships with are: classic and reddit
 $style = "classic";
 
 // Full Netowk Name
@@ -46,10 +46,13 @@ $net_name = "Digital IRC";
 $net_url = "http://digitalirc.org/";
 
 // Full url for your idlerpg channel
-$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan;
+$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan_clean;
 
 // Enable google analytics
 $enable_analytics = False;
+
+// Use classic or new google analytics (NB the google tracking code is different for each)
+$classic_analytics = False;
 
 // Google Analytics tracking ID
 $analytics_tracking_code = "";

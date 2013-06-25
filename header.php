@@ -21,7 +21,6 @@ Based on a work at http://idlerpg.net/.
                  '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-responsive.css" rel="stylesheet" media="screen">';
         }
     ?>
-
     <style type="text/css">
         <!-- Global Styles -->
         <!--body {
@@ -52,79 +51,71 @@ Based on a work at http://idlerpg.net/.
         }
         <?php 
         if ($_SERVER['PHP_SELF'] == $BASEURL . 'index.php') {
-            echo "        /* index styles */\n";
-            echo "        table.uniques {\n";
-            echo "          border: 1px solid #c0c0c0;\n";
-            echo "          padding: 5px;\n";
-            echo "          text-align: left;\n";
-            echo "        }\n";
-            echo "        table.uniques td {\n";
-            echo "          padding-left: 10px;\n";
-            echo "        }\n";
-            echo "        table.penalty {\n";
-            echo "        border: 1px solid #c0c0c0;\n";
-            echo "        padding: 5px;\n";
-            echo "        text-align: left;\n";
-            echo "        }\n";
-            echo "        table.penalty th {\n";
-            echo "            text-align: right;\n";
-            echo "        }\n";
+            echo "        /* index styles */\n".
+                 "        table.uniques {\n".
+                 "          border: 1px solid #c0c0c0;\n".
+                 "          padding: 5px;\n".
+                 "          text-align: left;\n".
+                 "        }\n".
+                 "        table.uniques td {\n".
+                 "          padding-left: 10px;\n".
+                 "        }\n".
+                 "        table.penalty {\n".
+                 "        border: 1px solid #c0c0c0;\n".
+                 "        padding: 5px;\n".
+                 "        text-align: left;\n".
+                 "        }\n".
+                 "        table.penalty th {\n".
+                 "            text-align: right;\n".
+                 "        }\n";
         } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'players.php') {
-            echo "       /* player page */\n";
-            echo "        li.online { font-weight: bold; }\n";
-            echo "        li.offline { color: #c0c0c0; }\n";
-            echo "        a.offline { color: #707070; }\n";
-            echo "        #map {\n";
-            echo "          width: 500px;\n";
-            echo "          height: 500px;\n";
-            echo "          background-image: url(newmap.png);\n";
-            echo "        }\n";
-            echo "        table.forum {\n";
-            echo "            border: 1px solid #c0c0c0;\n";
-            echo "            table-layout: fixed;\n";
-            echo "            overflow: auto;\n";
-            echo "        }\n";
-            echo "        table.forum td,tr,caption,thead,tfoot,th {\n";
-            echo "            padding-left: 10px;\n";
-            echo "            padding-right: 10px;\n";
-            echo "        }\n";
-            echo "        .tdblue { background-color: #ffffdf; }\n";
-            echo "        .tdgray { background-color: #eeeee0; }\n";
-            echo "        .tdred {\n";
-            echo "            border: 1px solid red;\n";
-            echo "            background-color: #FFCCCC;\n";
-            echo "        }\n";
-            echo "        .smallest {\n";
-            echo "            font-size: 11px;\n";
-            echo "        }\n";
+            echo "       /* player page */\n".
+                 "        li.online { font-weight: bold; }\n".
+                 "        li.offline { color: #c0c0c0; }\n".
+                 "        a.offline { color: #707070; }\n".
+                 "        #map {\n".
+                 "          width: 500px;\n".
+                 "          height: 500px;\n".
+                 "          background-image: url(newmap.png);\n".
+                 "        }\n".
+                 "        table.forum {\n".
+                 "            border: 1px solid #c0c0c0;\n".
+                 "            table-layout: fixed;\n".
+                 "            overflow: auto;\n".
+                 "        }\n".
+                 "        table.forum td,tr,caption,thead,tfoot,th {\n".
+                 "            padding-left: 10px;\n".
+                 "            padding-right: 10px;\n".
+                 "        }\n".
+                 "        .tdblue { background-color: #ffffdf; }\n".
+                 "        .tdgray { background-color: #eeeee0; }\n".
+                 "        .tdred {\n".
+                 "            border: 1px solid red;\n".
+                 "            background-color: #FFCCCC;\n".
+                 "        }\n".
+                 "        .smallest {\n".
+                 "            font-size: 11px;\n".
+                 "        }\n";
         } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'worldmap.php') {
-            echo "        #map {\n";
-            echo "            width: 500px;\n";
-            echo "            height: 500px;\n";
-            echo "            background-image: url(newmap.png);\n";
-            echo "        }\n";
+            echo "        #map {\n".
+                 "            width: 500px;\n".
+                 "            height: 500px;\n".
+                 "            background-image: url(newmap.png);\n".
+                 "        }\n";
         } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'playerview.php') {
-            echo "        #map {\n";
-            echo "            width: 500px;\n";
-            echo "            height: 500px;\n";
-            echo "            background-image: url(newmap.png);\n";
-            echo "        }\n";
+            echo "        #map {\n".
+                 "            width: 500px;\n".
+                 "            height: 500px;\n".
+                 "            background-image: url(newmap.png);\n".
+                 "        }\n";
         }
         echo "    </style>\n";
         if ($enable_analytics == True) {
-            echo "    <script>\n";
-            echo "        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
-            echo "        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
-            echo "        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
-            echo "        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
-            echo "        ga('create', ',$analytics_tracking_code', '$analytics_tracking_domain');\n";
-            echo "        ga('send', 'pageview');\n";
-            echo "    </script>\n";
+            include("analytics.php");
         }
         ?>
   </head>
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -141,7 +132,6 @@ Based on a work at http://idlerpg.net/.
               <li<?php if ($BASEURL . 'contact.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>contact.php">Contact</a></li>
               <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>worldmap.php">World Map</a></li>
               <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>quest.php">Quest Info</a></li>
-              <!--<li<?php if ($BASEURL . 'thanks.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>thanks.php">Thanks</a></li>-->
               <li><a href="https://github.com/adamus1red/idlerpg-site/">Site Source</a></li>
           </div><!--/.nav-collapse -->
         </div>
