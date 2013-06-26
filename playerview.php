@@ -148,10 +148,11 @@
         }
         if ($_GET['allmods'] != 1 && count($temp) > 5) {
 ?>
-      </details>
+
       <br />
       [<a href="<?php echo $_SERVER['PHP_SELF']."?player=".urlencode($user);?>&amp;allmods=1">View all Character Modifiers</a> (<?=count($temp)?>)]
       </p>
+      </details>
 <?php
         }
     }
