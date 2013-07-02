@@ -48,6 +48,9 @@ $net_url = "http://digitalirc.org/";
 // Full url for your idlerpg channel
 $irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan_clean;
 
+// Fuck IE (True by default)
+$fuck_IE = True;
+
 // Enable google analytics
 $enable_analytics = False;
 
