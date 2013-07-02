@@ -7,7 +7,7 @@ $admin_nick="YourNick";
 $irpg_bot="IdleRPG";
 
 // your game's server
-$irpg_network="irc.digitalirc.org";
+$irpg_network="irc.example.org";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
@@ -40,13 +40,13 @@ $mapy = 500;
 $style = "classic";
 
 // Full Netowk Name
-$net_name = "Digital IRC";
+$net_name = "Example IRC";
 
 // Full network homepage url
-$net_url = "http://digitalirc.org/";
+$net_url = "http://example.org/";
 
-// Full url for your idlerpg channel
-$irpg_chan_url = "irc://".$irpg_network."/".$irpg_chan_clean;
+// Webchat URL (must be full url e.g. http://webchat.com/?channel to disable change to none (default))
+$webchat_url = "none";
 
 // Fuck IE (True by default)
 $fuck_IE = True;
