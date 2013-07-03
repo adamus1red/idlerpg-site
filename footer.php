@@ -18,7 +18,7 @@
         <p><a href="contact.php">contact us</a> or 
 <?php
         if ($webchat_url != "none") {
-            echo '            <a href="'$webchat_url'">join the IRC</a>.';
+            echo '            <a href="'.$webchat_url.'">join the IRC</a>.';
         } else {
             echo '            <a href="irc://'.$irpg_network.'/'.$irpg_chan_clean'">join the IRC</a>.';
 <?php
