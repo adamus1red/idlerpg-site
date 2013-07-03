@@ -21,6 +21,7 @@
             echo '            <a href="'.$webchat_url.'">join the IRC</a>.';
         } else {
             echo '            <a href="irc://'.$irpg_network.'/'.$irpg_chan_clean.'">join the IRC</a>.';
+        }
             $hits = file("hits.db");
             $fp = fopen("hits.db", "w");
             $thispage = explode("/",$_SERVER['PHP_SELF']);
