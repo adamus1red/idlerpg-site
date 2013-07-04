@@ -20,6 +20,7 @@
         if ($webchat_url != "none") {
             echo '            <a href="'.$webchat_url.'">join the IRC</a>.';
         } else {
+            $irpg_chan_clean = str_replace('#', '', $irpg_chan);
             echo '            <a href="irc://'.$irpg_network.'/'.$irpg_chan_clean.'">join the IRC</a>.';
         }
             $hits = file("hits.db");

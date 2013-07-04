@@ -11,7 +11,7 @@ $irpg_network="irc.example.org";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
-$irpg_chan_clean = str_replace('#', '', $irpg_chan);
+
 // full or relative pathname to the DBs:
 
 // character database
