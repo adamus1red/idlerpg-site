@@ -115,6 +115,8 @@ Based on a work at http://idlerpg.net/.
         }
         if ($fuck_IE == True) {
             echo '            <!--[if lte IE 9]> <script type="text/javascript" src="' . $BASEURL . 'js/fucking-ie.js"></script> <![endif]-->';
+        } else {
+            echo '            <!--[if lte IE 9]> <script type="text/javascript" src="' . $BASEURL . 'js/html5shiv.js"></script> <![endif]-->';
         }
         ?>
   </head>

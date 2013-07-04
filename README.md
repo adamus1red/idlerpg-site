@@ -1,4 +1,4 @@
-IRPG Website Code v1.4.1 (24/06/13)
+IRPG Website Code v1.4.2 (04/07/13)
 ===
 
 Description
@@ -41,6 +41,7 @@ This site differs from the original site source:
 * Ability to add themes!
 * cleaner looking playerview page
 * Configurable for old and new google analytics tracking code
+* And more!
 
 For more changes please see the [original change][ocl] log.
 
