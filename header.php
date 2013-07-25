@@ -49,7 +49,7 @@ Based on a work at http://idlerpg.net/.
             padding-right: 5px;
             }
         }
-        <?php 
+<?php 
         if ($_SERVER['PHP_SELF'] == $BASEURL . 'index.php') {
             echo "        /* index styles */\n".
                  "        table.uniques {\n".
@@ -103,6 +103,12 @@ Based on a work at http://idlerpg.net/.
                  "            background-image: url(newmap.png);\n".
                  "        }\n";
         } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'playerview.php') {
+            echo "        #map {\n".
+                 "            width: 500px;\n".
+                 "            height: 500px;\n".
+                 "            background-image: url(newmap.png);\n".
+                 "        }\n";
+        } else if ($_SERVER['PHP_SELF'] == $BASEURL . 'quest.php') {
             echo "        #map {\n".
                  "            width: 500px;\n".
                  "            height: 500px;\n".
