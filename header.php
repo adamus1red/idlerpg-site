@@ -24,8 +24,12 @@ Based on a work at http://idlerpg.net/.
     <style type="text/css">
         <!-- Global Styles -->
         body {
+            
+        }
+        .wrap {
             padding-top: 60px;
         }
+        
         .container {
             margin: 0 auto;
             max-width: 1000px;
@@ -153,4 +157,4 @@ Based on a work at http://idlerpg.net/.
         </div>
     </div>
 
-    <div class="container">
+    <div class="container wrap">
