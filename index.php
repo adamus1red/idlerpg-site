@@ -232,7 +232,7 @@
            &nbsp;&nbsp;you have a 1 / ((1.4)^number) chance to find an
            item at this level<br />
            end for
-      <div class="well well-sm">
+      </div>
 
       <p>As for item type, you have an equal chance to roll any type.</p>
     
@@ -270,10 +270,10 @@
       <p>If you lose, you will be penalized time. The penalty is calculated
       using the formula:</p>
 
-      
+      <div class="well well-sm">
         ((the larger number of (OPPONENT_LEVEL/7) and 7) / 100) *
         YOUR_NEXT_TIME_TO_LEVEL
-      
+      </div>
 
       <p>This means that you gain no less than 7% of your next time to level.
       If you lose, your opponent is not awarded any time.</p>
