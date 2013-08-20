@@ -23,10 +23,8 @@ Based on a work at http://idlerpg.net/.
     ?>
     <style type="text/css">
         <!-- Global Styles -->
-        body {
-            padding-top: 60px;
-        }
         .container {
+            padding-top: 60px;
             margin: 0 auto;
             max-width: 1000px;
         }
