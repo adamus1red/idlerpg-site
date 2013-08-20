@@ -141,17 +141,12 @@ Based on a work at http://idlerpg.net/.
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li<?php if ($BASEURL . 'index.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>">Game Info</a></li>
+                    <li<?php if ($BASEURL . 'index.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>/">Game Info</a></li>
                     <li<?php if ($BASEURL . 'players.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>players.php">Player Info</a></li>
                     <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>worldmap.php">World Map</a></li>
                     <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>quest.php">Quest Info</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li<?php if ($BASEURL . 'contact.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>contact.php">Contact</a></li>
-                            <li><a href="https://github.com/adamus1red/idlerpg-site/">Site Source</a></li>
-                        </ul>
-                    </li>
+                    <li<?php if ($BASEURL . 'contact.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>contact.php">Contact</a></li>
+                    <li><a href="https://github.com/adamus1red/idlerpg-site/">Site Source</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
