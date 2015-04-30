@@ -19,8 +19,8 @@
 
         $class = htmlentities($class);
         $next_level = duration($secs);
-        echo "<li class="media">".
-             "    <div class="media-body">";
+        echo "<li class=\"media\">".
+             "    <div class=\"media-body\">";
         print "    <h4 class=\"media-heading ".(!$online?"\"offline\"":"")."><a".
               (!$online?" class=\"offline\"":"").
               " href=\"playerview.php?player=".urlencode($user).
