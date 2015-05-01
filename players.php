@@ -18,7 +18,6 @@
 
         $class = htmlentities($class);
         $next_level = duration($secs);
-
         print "    <li".(!$online?" class=\"offline\"":"")."><a".
               (!$online?" class=\"offline\"":"").
               " href=\"playerview.php?player=".urlencode($user).
