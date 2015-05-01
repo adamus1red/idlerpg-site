@@ -1,7 +1,7 @@
 <?php
     include("config.php");
     session_start(); // sessions to generate only one map / person / 20s
-    if (isset($_SESSION['time']) && time()-$_SESSION['time'] < 5) {
+    if (isset($_SESSION['time']) && time()-$_SESSION['time'] < 20) {
         header("Location: maperror.png");
         exit(0);
     }
