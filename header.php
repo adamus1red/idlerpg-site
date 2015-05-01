@@ -15,22 +15,20 @@ Based on a work at http://idlerpg.net/.
 <?php
         if ($style == null) {
             echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/classic/css/style.css" media="screen">'."\n".
-                 '    <link href="'.$BASEURL.'theme/classic/css/style-responsive.css" rel="stylesheet" media="screen">';
+                 '    <link href="'.$BASEURL.'theme/classic/css/style-theme.css" rel="stylesheet" media="screen">';
         } else {
             echo '    <link rel="stylesheet" type="text/css" href="'.$BASEURL.'theme/'.$style.'/css/style.css" media="screen">'."\n".
-                 '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-responsive.css" rel="stylesheet" media="screen">';
+                 '    <link href="'.$BASEURL.'theme/'.$style.'/css/style-theme.css" rel="stylesheet" media="screen">';
         }
     ?>
     <style type="text/css">
         <!-- Global Styles -->
-        body {
-            
-        }
-        .wrap {
+        <!--body {
             padding-top: 60px;
-        }
-        
+            padding-bottom: 40px;
+        }-->
         .container {
+            padding-top: 60px;
             margin: 0 auto;
             max-width: 1000px;
         }
@@ -118,38 +116,38 @@ Based on a work at http://idlerpg.net/.
                  "        }\n";
         }
         echo "    </style>\n";
-        if ($enable_analytics == True) {
+        if (strtolower($analytics_type) == ("google" || "piwik") {
             include("analytics.php");
         }
         if ($fuck_IE == True) {
-            echo '            <!--[if lte IE 9]> <script type="text/javascript" src="' . $BASEURL . 'js/fucking-ie.js"></script> <![endif]-->';
+            echo '           <script type="text/javascript" src="' . $BASEURL . 'js/fucking-ie.js"></script>';
         } else {
             echo '            <!--[if lte IE 9]> <script type="text/javascript" src="' . $BASEURL . 'js/html5shiv.js"></script> <![endif]-->';
         }
         ?>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php $BASEURL; ?>"><?php echo $net_name; ?></a>
+                <a class="navbar-brand" href="<?php echo $BASEURL;?>"><?php echo $net_name;?></a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li<?php if ($BASEURL . 'index.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>">Game Info</a></li>
-                    <li<?php if ($BASEURL . 'players.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>players.php">Player Info</a></li>
-                    <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>worldmap.php">World Map</a></li>
-                    <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>quest.php">Quest Info</a></li>
-                    <li<?php if ($BASEURL . 'contact.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php $BASEURL; ?>contact.php">Contact</a></li>
+                    <li<?php if ($BASEURL . 'players.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>players.php">Player Info</a></li>
+                    <li<?php if ($BASEURL . 'contact.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>contact.php">Contact</a></li>
+                    <li<?php if ($BASEURL . 'worldmap.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>worldmap.php">World Map</a></li>
+                    <li<?php if ($BASEURL . 'quest.php' == $_SERVER['PHP_SELF']) { echo " class=active";}?>><a href="<?php echo $BASEURL;?>quest.php">Quest Info</a></li>
                     <li><a href="https://github.com/adamus1red/idlerpg-site/">Site Source</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
-
-    <div class="container wrap">
+    <div class="container">
