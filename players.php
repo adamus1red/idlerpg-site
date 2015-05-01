@@ -8,8 +8,7 @@
   <h1>Players</h1>
   <h2>Pick a player to view</h2>
   <p class="small">[gray=offline]</p>
-  <ul class="media-list">
-
+  <ol>
 <?php
     $file = file($irpg_db);
     unset($file[0]);
@@ -19,18 +18,12 @@
 
         $class = htmlentities($class);
         $next_level = duration($secs);
-        echo "<li class="media">".
-             "    <div class="media-body">";
-        print "    <h4 class=\"media-heading ".(!$online?"\"offline\"":"")."><a".
+
+        print "    <li".(!$online?" class=\"offline\"":"")."><a".
               (!$online?" class=\"offline\"":"").
               " href=\"playerview.php?player=".urlencode($user).
               "\">".htmlentities($user).
-              "</a></h4>\n".
-              "<p>Level: $level".
-              "<p>Class: $class".
-              "<p>Next level in $next_level.\n".
-              "</div>".
-              "</li>";
+              "</a>, the level $level $class. Next level in $next_level.</li>\n";
 
     }
 ?>
