@@ -13,13 +13,7 @@
     
     include("header.php");
     include("commonfunctions.php");
-    echo "<ul class="nav nav-tabs" id="myTab">\n".
-         "<li class="active"><a href="#home">Player Info</a></li>\n".
-         "<li><a href="#items">Items</a></li>\n".
-         "<li><a href="#penalties">Penalties</a></li>\n".
-         "<li><a href="#modifiers">Character Modifiers</a></li>\n".
-         "<ul>\n".
-         "<div class="tab-content">\n";
+    echo "<h1>Player Info</h1>";
     $file = fopen($irpg_db,"r");
     fgets($file,1024); // skip top comment
     $found=0;
@@ -56,8 +50,7 @@
     else {
         $class=htmlentities($class);
         /* if we htmlentities($user), then we cannot use links with it. */
-        echo "<div class="tab-pane fade active" id="home">".
-             "<summary>\n".
+        echo "<summary>\n".
              "      <p><span class=\"lead\"><b>User:</b> ".htmlentities($user)."</span><br />\n".
              "      <b>Class:</b> $class<br />\n".
              "      <b>Admin?:</b> ".($isadmin?"Yes":"No")."<br />\n".
@@ -74,8 +67,7 @@
              "</summary>\n".
              "    <h2>Map</h2>\n".
              "    ".($showmap?"<div id=\"map\"><img src=\"makemap.php?player=".urlencode($user)."\"></div>\n\n":"<p><a href=\"?player=".urlencode($user)."&showmap=1\">Show map</a></p>\n\n")."".
-             "</div>".
-             "<div class="tab-pane" id="items">\n".
+             "<details>\n".
              "    <h2>Items</h2>\n<p>";
         ksort($item);
         $sum = 0;
@@ -109,9 +101,7 @@
             $sum += $val;
         }
         echo "      <br />\n      sum: $sum<br />\n".
-             "    </p>\n".
-             "</div>\n".
-             "<div class="tab-pane" id="penalties">\n".
+             "    </p>".
              "    <h2>Penalties</h2>\n".
              "    <p>\n";
 
@@ -136,8 +126,6 @@
             }
         }
         fclose($file);
-        echo "</div>\n".
-             "<div class="tab-pane fade" id="modifiers">";
         if (!is_null($temp) && count($temp)) {
             echo('<h2>');
             echo $_GET['allmods']!=1?"Recent ":"";
@@ -151,28 +139,22 @@
             }
             else {
                 end($temp);
-                for ($i=0;$i<200;++$i) prev($temp);
+                for ($i=0;$i<4;++$i) prev($temp);
                 for ($line=trim(current($temp));$line;$line=trim(next($temp))) {
                     $line=htmlentities(trim($line));
                     echo "      $line<br />\n";
                 }
             }
         }
-        if ($_GET['allmods'] != 1 && count($temp) > 5)
-        {
+        if ($_GET['allmods'] != 1 && count($temp) > 5) {
 ?>
 
       <br />
       [<a href="<?php echo $_SERVER['PHP_SELF']."?player=".urlencode($user);?>&amp;allmods=1">View all Character Modifiers</a> (<?=count($temp)?>)]
       </p>
+      </details>
 <?php
         }
-        echo "</div>\n";
-        echo "<script>\n".
-             "  $(function () {\n".
-             "     $('#myTab a:last').tab('show')\n".
-             "  })\n".
-             "</script>\n";
     }
     include("footer.php");
 ?>
