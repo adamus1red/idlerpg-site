@@ -51,15 +51,18 @@ $webchat_url = "none";
 // Fuck IE (True by default)
 $fuck_IE = True;
 
-// Enable google analytics
-$enable_analytics = False;
-
-// Use classic or new google analytics (NB the google tracking code is different for each)
-$classic_analytics = False;
+// Analytics type (none, piwik, google)
+$analytics_type = "none"
 
 // Google Analytics tracking ID
 $analytics_tracking_code = "";
 
 // Google Analytics domain to track (This is nessisary for the new style google analytics tracking code)
 $analytics_tracking_domain = "";
+
+// Piwik Address
+$piwik_address = "";
+
+// Piwik Site ID
+$piwik_siteID = "";
 ?>
