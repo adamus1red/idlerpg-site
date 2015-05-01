@@ -51,6 +51,6 @@
         </div>
     </div>
     <script src="<?php echo $BASEURL;?>js/bootstrap.min.js"></script>
-    <script src="<?php echo $BASEURL;?>js/jquery.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
     </body>
 </html>
