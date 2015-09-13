@@ -5,7 +5,6 @@
     include("header.php");
 ?>
 
-  <h1>Players</h1>
   <h2>Pick a player to view</h2>
   <p class="small">[gray=offline]</p>
   <ol>
@@ -18,6 +17,7 @@
 
         $class = htmlentities($class);
         $next_level = duration($secs);
+
         print "    <li".(!$online?" class=\"offline\"":"")."><a".
               (!$online?" class=\"offline\"":"").
               " href=\"playerview.php?player=".urlencode($user).

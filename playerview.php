@@ -50,8 +50,7 @@
     else {
         $class=htmlentities($class);
         /* if we htmlentities($user), then we cannot use links with it. */
-        echo "<summary>\n".
-             "      <p><span class=\"lead\"><b>User:</b> ".htmlentities($user)."</span><br />\n".
+        echo "      <p><b>User:</b> ".htmlentities($user)."<br />\n".
              "      <b>Class:</b> $class<br />\n".
              "      <b>Admin?:</b> ".($isadmin?"Yes":"No")."<br />\n".
              "      <b>Level:</b> $level<br />\n".
@@ -64,10 +63,8 @@
              "      <b>Current position:</b> [$x,$y]<br />\n".
              "      <b>Alignment:</b> ".($alignment=='e'?"Evil":($alignment=='n'?"Neutral":"Good"))."<br />\n".
              "      <b>XML:</b> [<a href=\"xml.php?player=".urlencode($user)."\">link</a>]</p>\n".
-             "</summary>\n".
              "    <h2>Map</h2>\n".
              "    ".($showmap?"<div id=\"map\"><img src=\"makemap.php?player=".urlencode($user)."\"></div>\n\n":"<p><a href=\"?player=".urlencode($user)."&showmap=1\">Show map</a></p>\n\n")."".
-             "<details>\n".
              "    <h2>Items</h2>\n<p>";
         ksort($item);
         $sum = 0;
@@ -148,11 +145,9 @@
         }
         if ($_GET['allmods'] != 1 && count($temp) > 5) {
 ?>
-
       <br />
       [<a href="<?php echo $_SERVER['PHP_SELF']."?player=".urlencode($user);?>&amp;allmods=1">View all Character Modifiers</a> (<?=count($temp)?>)]
       </p>
-      </details>
 <?php
         }
     }

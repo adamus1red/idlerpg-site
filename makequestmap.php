@@ -3,8 +3,8 @@
     $file = fopen($irpg_db,"r");
     fgets($file,1024);
 
-    session_start(); // sessions to generate only one map / person / 20s
-    if (isset($_SESSION['time']) && time()-$_SESSION['time'] < 20) {
+    session_start(); // sessions to generate only one map / person / 3s
+    if (isset($_SESSION['time']) && time()-$_SESSION['time'] < 3) {
         header("Location: maperror.png");
         exit(0);
     }

@@ -5,7 +5,7 @@
 ?>
 
 <h1>World Map</h1>
-<p>[offline users are red, online users are blue]</p>
+<p>[offline users are red, online users are blue, normal items are orange, unique items are yellow]</p>
 
 
 <div id="map">
@@ -13,15 +13,22 @@
     <map id="world" name="world">
 <?php
     $file = fopen($irpg_db,"r");
-    fgets($file);
-    while($location=fgets($file)) {
+    fgets($file,1024);
+    $itemfile = fopen($irpg_itemdb,"r");
+    fgets($itemfile,1024);
+    while($location=fgets($file,1024)) {
         list($who,,,,,,,,,,$x,$y) = explode("\t",trim($location));
-        print "        <area shape=\"circle\" coords=\"".$x.",".$y.",6\" alt=\"".htmlentities($who).
+        print "        <area shape=\"circle\" coords=\"".$x.",".$y.",".$crosssize."\" alt=\"".htmlentities($who).
               "\" href=\"playerview.php?player=".urlencode($who)."\" title=\"".htmlentities($who)."\" />\n";
+    }
+    while ($line=fgets($itemfile,1024)) {
+        list($x,$y,$type,$level) = explode("\t",trim($line));
+        print "        <area shape=\"circle\" coords=\"".$x.",".$y.",".$crosssize."\" alt=\"".htmlentities($type." [".$level."]").
+              "\" title=\"".htmlentities($type." [".$level."]")."\" />\n";
     }
     fclose($file);
 ?>
     </map>
 </div>
 
-<?php include("footer.php");?>
+<?include("footer.php");?>
