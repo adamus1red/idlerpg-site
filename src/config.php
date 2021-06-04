@@ -1,13 +1,13 @@
 <?php
 
-$admin_email="mrr@digitalirc.org";
-$admin_nick="MrRandom";
+$admin_email="noreply@example.com";
+$admin_nick="adamus1red";
 
 // nickname of your bot
-$irpg_bot="irpgbot";
+$irpg_bot="IdleBot";
 
 // your game's server
-$irpg_network="irc.digitalirc.org";
+$irpg_network="irc.libera.chat";
 
 // your game's channel
 $irpg_chan="#IdleRPG";
@@ -15,20 +15,24 @@ $irpg_chan="#IdleRPG";
 // full or relative pathname to the DBs:
 
 // character database
-$irpg_db="./irpg.db";
+$irpg_db="/config/irpg.db";
 
 // item database
-$irpg_itemdb="./mapitems.db";
+$irpg_itemdb="/config/mapitems.db";
 
 // time modifiers file
-$irpg_mod="./modifiers.txt";
+$irpg_mod="/config/modifiers.txt";
 
 // active quest info file
-$irpg_qfile="./questinfo.txt";
+$irpg_qfile="/config/questinfo.txt";
 
-$net_url="http://digitalirc.org";
-$net_serverurl="http://digitalirc.org/wiki/servers";
-$net_name="Digital IRC Network";
+// Alternate hits.db file
+$irpg_hitsdb="/config/hits.db"
+
+// Network Info
+$net_url="http://libera.chat";
+$net_serverurl="https://libera.chat/guides/connect";
+$net_name="Libera IdleRPG";
 
 // directory in which your site is located from the root directory. my site
 // is http://jotun.ultrazone.org/g7/, so it's "/g7/"

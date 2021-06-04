@@ -5,8 +5,12 @@
             <div class="container">
                 <p class="small">Questions? Comments? Suggestions? Bugs? Naked pics? <a href="contact.php"><?php print $admin_email?></a> or <?php print $admin_nick?>@IRC.
     <?php
-                $hits = file("hits.db");
-                $fp = fopen("hits.db", "w");
+                $hitsdb="hits.db";
+                if(isset($irpg_hitsdb) && file_exists($irpg_hitsdb)) {
+                    $hitsdb=$irpg_hitsdb;
+                }
+                $hits = file($hitsdb);
+                $fp = fopen($hitsdb, "w");
                 $thispage = explode("/",$_SERVER['PHP_SELF']);
                 $thispage = array_pop($thispage);
                 if ($fp == false) {
