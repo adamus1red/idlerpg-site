@@ -12,8 +12,8 @@
     <h2>Location</h2>
     <p> 
       The Idle RPG can be played on the
-      <a href="<?php echo $net_url; ?>"><?php echo $net_name;?></a> in the
-      channel <?php echo $irpg_chan; ?>. See <a href="<?php echo $net_serverurl; ?>">this</a>
+      <a class="link-secondary" href="<?php echo $net_url; ?>"><?php echo $net_name;?></a> in the
+      channel <?php echo $irpg_chan; ?>. See <a class="link-secondary" href="<?php echo $net_serverurl; ?>">this</a>
       link for how to connect.
     </p>
     
@@ -39,7 +39,7 @@
           /msg <?php echo $irpg_bot;?> LOGIN &lt;char name&gt; &lt;password&gt;
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
     
 
     <h2>Logging Out</h2>
@@ -50,7 +50,7 @@
           /msg <?php echo $irpg_bot;?> LOGOUT
         </code>
       
-      <p>This is a p20 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p20 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
     
 
     <h2>Changing Your Password</h2>
@@ -61,8 +61,8 @@
           /msg <?php echo $irpg_bot;?> NEWPASS &lt;new password&gt;
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
-      <p>If you have forgotten your password, please use the <a href="#info">
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
+      <p>If you have forgotten your password, please use the <a class="link-secondary" href="#info">
       INFO</a> command to find an online admin to help you. If your
       administrator does not have the INFO command enabled, then just message
       an op in the channel. They can probably help you.</p>
@@ -76,7 +76,7 @@
           /msg <?php echo $irpg_bot;?> REMOVEME
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command :^)</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command :^)</p>
     
 
     <h2>Changing Your Alignment</h2>
@@ -87,7 +87,7 @@
           /msg <?php echo $irpg_bot;?> ALIGN &lt;good|neutral|evil&gt;
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
       <p>Your alignment can affect certain aspects of the game. You may align
       with good, neutral, or evil. 'Good' users have a 10% boost to their item
       sum for battles, and a 1/12 chance each day that they, along with a
@@ -98,7 +98,7 @@
       attempt to steal an item from a 'good' user (whom they cannot help but
       hate) or b) be forsaken (for 1-5% of their TTL) by their evil god. After
       all, we all know that crime doesn't pay. Also, 'good' users have only a
-      1/50 chance of landing a <a href="#critstrike">Critical Strike</a> when
+      1/50 chance of landing a <a class="link-secondary" href="#critstrike">Critical Strike</a> when
       battling, while 'evil' users (who always fight dirty) have a 1/20
       chance. Neutral users haven't had anything changed, and all users start
       off as neutral.</p>
@@ -114,7 +114,7 @@
           /msg <?php echo $irpg_bot;?> INFO
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
       <p>This command gives info such as to which server the bot is connected
       and the nicknames of online bot admins.</p>
       <p>This command is optional, and may be disabled by your bot admin.</p>
@@ -148,7 +148,7 @@
           /msg <?php echo $irpg_bot;?> QUEST
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
     
 
     <h2>Checking Your Online Status</h2>
@@ -159,7 +159,7 @@
           /msg <?php echo $irpg_bot;?> WHOAMI
         </code>
       
-      <p>This is a p0 (see <a href="#penalties">Penalties</a>) command.</p>
+      <p>This is a p0 (see <a class="link-secondary" href="#penalties">Penalties</a>) command.</p>
     
 
     <a name="penalties"></a><h2>Penalties</h2>
@@ -171,33 +171,33 @@
       time to level and are based on your character level. The formulae
       are as follows:</p>
 
-      <table id="penalty" class="table penalty">
+      <table id="penalty" class="table table-dark penalty table-striped">
         <tr>
-          <th>Nick change</th>
+          <th scope="row">Nick change</th>
           <td>30*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>Part</th>
+          <th scope="row">Part</th>
           <td>200*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>Quit</th>
+          <th scope="row">Quit</th>
           <td>20*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>LOGOUT command</th>
+          <th scope="row">LOGOUT command</th>
           <td>20*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>Being Kicked</th>
+          <th scope="row">Being Kicked</th>
           <td>250*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>Channel privmsg</th>
+          <th scope="row">Channel privmsg</th>
           <td>[message_length]*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
-          <th>Channel notice</th>
+          <th scope="row">Channel notice</th>
           <td>[message_length]*(1.14^(YOUR_LEVEL))</td>
         </tr>
       </table>
@@ -212,7 +212,7 @@
     <h2>Items</h2>
     
       <p>Each time you level, you find an item. You can find an item as
-      high as 1.5*YOUR_LEVEL (unless you find a <a href="#uniqueitems">
+      high as 1.5*YOUR_LEVEL (unless you find a <a class="link-secondary" href="#uniqueitems">
       unique item</a>). There are 10 types of items: rings,
       amulets, charms, weapons, helms, tunics, gloves, leggings,
       shields, and boots. You can find one of each type. When you find
@@ -221,7 +221,7 @@
       3.0, there is an optional, p0 STATUS command that your admin may have
       enabled, but you cannot see which items you have over IRC (only your
       total item sum). You can, however, see which items you have on the web
-      <a href="players.php">here</a>.</p>
+      <a class="link-secondary" href="players.php">here</a>.</p>
 
       <p>As you may guess, you have a higher chance of rolling an item of a
       lower value than you do of rolling one of a higher value level. The exact
@@ -265,7 +265,7 @@
 
       <p>This means that you lose no less than 7% from your next time to level.
       If you win, your opponent is not penalized any time, unless you land a
-      <a href="#critstrike">Critical Strike</a>.</p>
+      <a class="link-secondary" href="#critstrike">Critical Strike</a>.</p>
 
       <p>If you lose, you will be penalized time. The penalty is calculated
       using the formula:</p>
@@ -290,10 +290,10 @@
       area in which players may walk. If you encounter another player on the
       grid, you have a 1 / (NUMBER_OF_ONLINE_PLAYERS) chance to battle them.
       Battle awards are calculated using the above formulae. More information
-      on the grid system is available <a href="#grid">here</a>.</p>
+      on the grid system is available <a class="link-secondary" href="#grid">here</a>.</p>
       
       <p>Also as of version 3.0, a successful battle may result an item being
-      <a href="#stealing">stolen</a>.</p>
+      <a class="link-secondary" href="#stealing">stolen</a>.</p>
     
     
     <a name="uniqueitems"></a><h2>Unique Items</h2>
@@ -301,57 +301,57 @@
       <p>As of v2.1.2, after level 25, you have a chance to roll items
       significantly higher than items you would normally find at that level.
       These are unique items, and have the following stats:</p>
-      <table id="uniques" class="table uniques">
+      <table id="uniques" class="table table-dark table-striped uniques">
         <tr>
-          <th>Name</th>
-          <th>Item Level Range</th>
-          <th>Required User Level</th>
-          <th>Chance to Roll</th>
+          <th scope="col">Name</th>
+          <th scope="col">Item Level Range</th>
+          <th scope="col">Required User Level</th>
+          <th scope="col">Chance to Roll</th>
         </tr>
         <tr>
-          <th>Mattt's Omniscience Grand Crown</th>
+          <th scope="row">Mattt's Omniscience Grand Crown</th>
           <td>50-74</td>
           <td>25 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Juliet's Glorious Ring of Sparkliness</th>
+          <th scope="row">Juliet's Glorious Ring of Sparkliness</th>
           <td>50-74</td>
           <td>25 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Res0's Protectorate Plate Mail</th>
+          <th scope="row">Res0's Protectorate Plate Mail</th>
           <td>75-99</td>
           <td>30 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Dwyn's Storm Magic Amulet</th>
+          <th scope="row">Dwyn's Storm Magic Amulet</th>
           <td>100-124</td>
           <td>35 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Jotun's Fury Colossal Sword</th>
-          <td>150-174</td>
+          <th scope="row">Jotun's Fury Colossal Sword</th>
+          <td scope="row">150-174</td>
           <td>40 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Drdink's Cane of Blind Rage</th>
+          <th scope="row">Drdink's Cane of Blind Rage</th>
           <td>175-200</td>
           <td>45 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Mrquick's Magical Boots of Swiftness</th>
+          <th scope="row">Mrquick's Magical Boots of Swiftness</th>
           <td>250-300</td>
           <td>48 or greater</td>
           <td>1 / 40</td>
         </tr>
         <tr>
-          <th>Jeff's Cluehammer of Doom</th>
+          <th scope="row">Jeff's Cluehammer of Doom</th>
           <td>300-350</td>
           <td>52 or greater</td>
           <td>1 / 40</td>
@@ -427,7 +427,7 @@
       quest's end). To complete a quest, no user can be penalized until the
       quest's end. As of v3.0, there are two kinds of quests: grid-based quests
       and time-based quests. Time-based quests last a random time between 12 and
-      24 hours. Grid-based quests are based on the <a href="#grid">grid
+      24 hours. Grid-based quests are based on the <a class="link-secondary" href="#grid">grid
       system</a> and do not have a set time to completion. Rather, the questers
       must reach certain points on the map for their quest to be complete. If
       the quest is not completed, ALL online users are penalized a p15 as
@@ -471,7 +471,7 @@
         emad, inkblot(!), schmolli, mikegrb, mumkin, sean, Minhiriath,
         and Dan, I give many thanks. Unfortunately, this list has grown too
         large to maintain. More user contributions can be seen in the
-        <a href="http://idlerpg.net/ChangeLog.txt">ChangeLog</a>.
+        <a class="link-secondary" href="http://idlerpg.net/ChangeLog.txt">ChangeLog</a>.
       </p>
     
 
