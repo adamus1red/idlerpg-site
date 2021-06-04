@@ -26,6 +26,10 @@ $irpg_mod="/config/modifiers.txt";
 // active quest info file
 $irpg_qfile="/config/questinfo.txt";
 
+// Alternate hits.db file
+$irpg_hitsdb="/config/hits.db"
+
+// Network Info
 $net_url="http://libera.chat";
 $net_serverurl="https://libera.chat/guides/connect";
 $net_name="Libera IdleRPG";
