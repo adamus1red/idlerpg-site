@@ -2,8 +2,6 @@
     include("config.php");
     $file = fopen($irpg_db,"r");
     fgets($file,1024);
-    $itemfile = fopen($irpg_itemdb,"r");
-    fgets($itemfile,1024);
 
     session_start(); // sessions to generate only one map / person / 3s
     if (isset($_SESSION['time']) && time()-$_SESSION['time'] < 3) {
@@ -26,12 +24,18 @@
         imageLine($map, $x-$crosssize, $y, $x+$crosssize, $y, $color);
         imageLine($map, $x, $y-$crosssize, $x, $y+$crosssize, $color);
     }
-    while ($line=fgets($itemfile,1024)) {
-        list($x,$y,,$level) = explode("\t",trim($line));
-        if (is_numeric($level)) $color = $orange;
-        else $color = $yellow;
-        imageLine($map, $x-$crosssize, $y-$crosssize, $x+$crosssize, $y+$crosssize, $color);
-        imageLine($map, $x+$crosssize, $y-$crosssize, $x-$crosssize, $y+$crosssize, $color);
+
+    if (file_exists($irpg_itemdb)) {
+        $itemfile = fopen($irpg_itemdb,"r");
+        fgets($itemfile,1024);
+
+        while ($line=fgets($itemfile,1024)) {
+            list($x,$y,,$level) = explode("\t",trim($line));
+            if (is_numeric($level)) $color = $orange;
+            else $color = $yellow;
+            imageLine($map, $x-$crosssize, $y-$crosssize, $x+$crosssize, $y+$crosssize, $color);
+            imageLine($map, $x+$crosssize, $y-$crosssize, $x-$crosssize, $y+$crosssize, $color);
+        }
     }
     header("Content-type: image/png");
     imagePNG($map);

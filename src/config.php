@@ -15,16 +15,16 @@ $irpg_chan="#IdleRPG";
 // full or relative pathname to the DBs:
 
 // character database
-$irpg_db="/home/jotun/irpg.db";
+$irpg_db="./irpg.db";
 
 // item database
-$irpg_itemdb="../mapitems.db";
+$irpg_itemdb="./mapitems.db";
 
 // time modifiers file
-$irpg_mod="/home/jotun/modifiers.txt";
+$irpg_mod="./modifiers.txt";
 
 // active quest info file
-$irpg_qfile="/home/jotun/questinfo.txt";
+$irpg_qfile="./questinfo.txt";
 
 $net_url="http://digitalirc.org";
 $net_serverurl="http://digitalirc.org/wiki/servers";
@@ -32,7 +32,7 @@ $net_name="Digital IRC Network";
 
 // directory in which your site is located from the root directory. my site
 // is http://jotun.ultrazone.org/g7/, so it's "/g7/"
-$BASEURL="/~torrent/dev/";
+$BASEURL="/";
 
 // width-wise dimension of your map file
 $mapx = 500;
