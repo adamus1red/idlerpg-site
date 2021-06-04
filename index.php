@@ -14,7 +14,7 @@
       The Idle RPG can be played on the
       <a href="<?php echo $net_url; ?>"><?php echo $net_name;?></a> in the
       channel <?php echo $irpg_chan; ?>. See <a href="<?php echo $net_serverurl; ?>">this</a>
-      link for a list of servers.
+      link for how to connect.
     </p>
     
 

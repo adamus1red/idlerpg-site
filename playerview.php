@@ -7,10 +7,12 @@
     if ($_GET['player']=="") header('Location: http://'.$_SERVER['SERVER_NAME'].
         ($_SERVER['SERVER_PORT']!=80?':'.$_SERVER['SERVER_PORT']:'').$BASEURL.
         'players.php');
-    
+
     $irpg_page_title = "Player Info: " . htmlentities($_GET['player']);
-    $showmap = $_GET['showmap'];
-    
+    $showmap = "";
+    if(isset($_GET['showmap'])) {
+        $showmap = $_GET['showmap'];
+    }
     include("header.php");
     include("commonfunctions.php");
     echo "<h1>Player Info</h1>";
@@ -95,7 +97,8 @@
                 $val = intval($val)." [<font color=\"$uniquecolor\">Juliet's Glorious Ring of Sparkliness</font>]";
             }
             echo "      $key: $val<br />\n";
-            $sum += $val;
+            echo "<!-- $key $val  --!>\n";
+            $sum += intval($val);
         }
         echo "      <br />\n      sum: $sum<br />\n".
              "    </p>".
@@ -125,9 +128,12 @@
         fclose($file);
         if (!is_null($temp) && count($temp)) {
             echo('<h2>');
-            echo $_GET['allmods']!=1?"Recent ":"";
+            if(isset($_GET['allmods']) && $_GET['allmods']!=1){
+                echo "Recent";
+            }
+//            echo $_GET['allmods']!=1?"Recent ":"";
             echo('Character Modifiers</h2><p>');
-            if ($_GET['allmods'] == 1 || count($temp) < 6) {
+            if ((isset($_GET['allmods']) && $_GET['allmods'] == 1) || count($temp) < 6) {
                 foreach ($temp as $line) {
                     $line=htmlentities(trim($line));
                     echo "      $line<br />\n";
@@ -143,7 +149,7 @@
                 }
             }
         }
-        if ($_GET['allmods'] != 1 && count($temp) > 5) {
+        if (!(isset($_GET['allmods'])) && count($temp) > 5) {
 ?>
       <br />
       [<a href="<?php echo $_SERVER['PHP_SELF']."?player=".urlencode($user);?>&amp;allmods=1">View all Character Modifiers</a> (<?=count($temp)?>)]
