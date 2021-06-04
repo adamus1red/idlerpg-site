@@ -43,4 +43,4 @@ jobs:
           
       - name: Docker multi-arch Build
         run: |
-          docker build -t adamus1red/idlerpg:latest --push --platform linux/amd64,linux/386,linux/arm64,linux/ppc64le,linux/arm/v7,linux/arm/v6 .; done
+          docker build -t adamus1red/idlerpg:latest --push --platform linux/amd64,linux/386,linux/arm64,linux/ppc64le,linux/arm/v7,linux/arm/v6 .
