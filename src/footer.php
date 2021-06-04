@@ -1,7 +1,7 @@
                 </div>
             </div>
         </main>
-        <footer class="text-muted">
+        <footer class="footer mt-auto py-3 text-muted">
             <div class="container">
                 <p class="small">Questions? Comments? Suggestions? Bugs? Naked pics? <a href="contact.php"><?php print $admin_email?></a> or <?php print $admin_nick?>@IRC.
     <?php

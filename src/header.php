@@ -8,7 +8,7 @@
 
     <title><?php echo $irpg_chan; ?> Idle RPG: <?php echo $irpg_page_title; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!--<link rel="stylesheet" type="text/css" href="g7.css" />-->
     <style type="text/css">
@@ -17,14 +17,16 @@
             height: 500px;
             background-image: url(newmap.png);
         }
-
+        main>.container {
+            padding-top: 60px;
+        }
         /*.container {
             padding-top: 10px;
         }*/
     </style>
 </head>
 
-<body class="bg-dark text-white">
+<body class="bg-dark text-white d-flex flex-column h-100">
     <header class="p-3 d-flex bg-dark text-white flex-wrap  py-3 mb-4 border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -63,6 +65,6 @@
             </div>
         </div>
     </header>
-    <main role="main">
+    <main class="flex-shrink-0" role="main">
         <div class="py-5 bg-dark text-white">
             <div class="container">
