@@ -63,8 +63,8 @@
 <?php
         $sum=0;
         foreach ($pen as $key => $val) {
-            echo "        <$key>$val</$key>\n";
-            $sum += $val;
+            echo "        <$key>".intval($val)."</$key>\n";
+            $sum += intval($val);
         }
         echo "        <total>$sum</total>\n";
 ?>
@@ -73,8 +73,8 @@
 <?php
         $sum=0;
         foreach ($item as $key => $val) {
-            echo "        <$key>$val</$key>\n";
-            $sum += $val;
+            echo "        <$key>".intval($val)."</$key>\n";
+            $sum += intval($val);
         }
         echo "        <total>$sum</total>\n";
 ?>
