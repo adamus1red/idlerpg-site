@@ -27,7 +27,7 @@ $irpg_mod="/config/modifiers.txt";
 $irpg_qfile="/config/questinfo.txt";
 
 // Alternate hits.db file
-$irpg_hitsdb="/config/hits.db"
+$irpg_hitsdb="/config/hits.db";
 
 // Network Info
 $net_url="http://libera.chat";
