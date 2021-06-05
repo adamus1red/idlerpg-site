@@ -19,7 +19,7 @@
         $next_level = duration($secs);
 
         print "    <li".(!$online?" class=\"offline\"":"")."><a".
-              (!$online?" class=\"offline\"":"").
+              (!$online?" class=\"offline\"":" class=\"online\"").
               " href=\"playerview.php?player=".urlencode($user).
               "\">".htmlentities($user).
               "</a>, the level $level $class. Next level in $next_level.</li>\n";

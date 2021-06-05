@@ -26,6 +26,16 @@
             color: #c0c0c0;
         }
 
+        li.online {
+            font-weight: bold;
+        }
+        a {
+            color: #C69500; 
+        }
+        a.offline {
+            color: #707070;
+        }
+
         /*.container {
             padding-top: 10px;
         }*/
@@ -70,7 +80,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white <?php if ($BASEURL . $value == $_SERVER['PHP_SELF']) {
                                                                     echo " active";
-                                                                } ?>" href="<?php echo $BASEURL.$value; ?>"><? echo $key; ?></a>
+                                                                } ?>" href="<?php echo $BASEURL . $value; ?>"><? echo $key; ?></a>
                             </li>
                     <?
                         }

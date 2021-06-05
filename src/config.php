@@ -39,7 +39,7 @@ $net_name="Libera IdleRPG";
 $BASEURL="/";
 
 // Additoinal pages to show in the header. Pages must be located under $BASEURL
-$site_pages= array(
+$site_pages = array(
     'Contact'=>"contact.php"
 ) ;
 
