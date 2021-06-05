@@ -38,6 +38,11 @@ $net_name="Libera IdleRPG";
 // is http://jotun.ultrazone.org/g7/, so it's "/g7/"
 $BASEURL="/";
 
+// Additoinal pages to show in the header. Pages must be located under $BASEURL
+$site_pages= array(
+    'Contact'=>"contact.php"
+) ;
+
 // width-wise dimension of your map file
 $mapx = 500;
 

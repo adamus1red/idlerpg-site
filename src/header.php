@@ -17,10 +17,15 @@
             height: 500px;
             background-image: url(newmap.png);
         }
+
         main>.container {
             padding-top: 60px;
         }
-        li.offline { color: #c0c0c0; }
+
+        li.offline {
+            color: #c0c0c0;
+        }
+
         /*.container {
             padding-top: 10px;
         }*/
@@ -59,6 +64,18 @@
                                                             echo " active";
                                                         } ?>" href="<?php echo $BASEURL; ?>worldmap.php">World Map</a>
                     </li>
+                    <? if (isset($site_pages) && count($site_pages) > 0) {
+                        foreach ($site_pages as $key => $value) {
+                    ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-white <?php if ($BASEURL . $value == $_SERVER['PHP_SELF']) {
+                                                                    echo " active";
+                                                                } ?>" href="<?php echo $BASEURL.$value; ?>"><? echo $key; ?></a>
+                            </li>
+                    <?
+                        }
+                    }
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="https://github.com/adamus1red/idlerpg-site/">Site Source</a>
                     </li>

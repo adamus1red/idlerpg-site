@@ -9,13 +9,14 @@
                 if(isset($irpg_hitsdb) && file_exists($irpg_hitsdb)) {
                     $hitsdb=$irpg_hitsdb;
                 }
-                $hits = file($hitsdb);
                 $fp = fopen($hitsdb, "w");
+                $hits = file($hitsdb);
                 $thispage = explode("/",$_SERVER['PHP_SELF']);
                 $thispage = array_pop($thispage);
                 if ($fp == false) {
                     echo "Error: could not open file hits.db.";
                 }
+                $found=0;
                 foreach ($hits as $line) {
                     list($page,$numhits,$date) = explode("\t",trim($line));
                     if ($page == $thispage) {
