@@ -20,6 +20,7 @@
         main>.container {
             padding-top: 60px;
         }
+        li.offline { color: #c0c0c0; }
         /*.container {
             padding-top: 10px;
         }*/
