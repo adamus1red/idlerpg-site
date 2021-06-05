@@ -174,7 +174,7 @@
       <table id="penalty" class="table table-dark penalty table-striped">
         <tr>
           <th scope="row">Nick change</th>
-          <td>30*(1.14^(YOUR_LEVEL))</td>
+          <td>20*(1.14^(YOUR_LEVEL))</td>
         </tr>
         <tr>
           <th scope="row">Part</th>
