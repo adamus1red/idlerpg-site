@@ -48,12 +48,12 @@
 ?>
 
 <player>
-    <username><?php print $user?></username>
+    <username><?php print htmlspecialchars($user,ENT_QUOTES)?></username>
     <isadmin><?php print $isadmin?></isadmin>
     <level><?php print $level?></level>
-    <class><?php print $class?></class>
+    <class><?php print htmlspecialchars($class,ENT_QUOTES)?></class>
     <ttl><?php print $secs?></ttl>
-    <userhost><?php print $uhost?></userhost>
+    <userhost><?php print htmlspecialchars($uhost,ENT_QUOTES)?></userhost>
     <online><?php print $online?></online>
     <totalidled><?php print $idled?></totalidled>
     <xpos><?php print $x?></xpos>
