@@ -1,4 +1,8 @@
 # IRPG Website
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/adamus1red/idlerpg-site/Docker%20Publish/master?style=for-the-badge)](https://github.com/adamus1red/docker-hopm/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/adamus1red/idlerpg?style=for-the-badge)](https://hub.docker.com/r/adamus1red/idlerpg)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/adamus1red/idlerpg/latest?style=for-the-badge)](https://hub.docker.com/r/adamus1red/idlerpg/tags)
+[![GitHub](https://img.shields.io/github/license/adamus1red/idlerpg-site?style=for-the-badge)](https://github.com/adamus1red/idlerpg-site)
 
 # Notes
 Based on IRPG Website v0.5 from http://idlerpg.net
