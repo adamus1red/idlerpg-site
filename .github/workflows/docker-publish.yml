@@ -6,7 +6,6 @@ name: Docker Publish
 # events but only for the main branch
 on:
   push:
-    branches: [master]
   pull_request:
   workflow_dispatch:
     inputs:
