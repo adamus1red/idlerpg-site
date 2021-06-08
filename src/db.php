@@ -10,32 +10,37 @@
 
     $file = file($irpg_db);
     unset($file[0]);
-    if (!$_GET['sort'] ||
-        (($_GET['sort'] != "cmp_level_asc") &&
-        ($_GET['sort'] != "cmp_level_desc") &&
-        ($_GET['sort'] != "cmp_isadmin_asc") &&
-        ($_GET['sort'] != "cmp_isadmin_desc") &&
-        ($_GET['sort'] != "cmp_alignment_asc") &&
-        ($_GET['sort'] != "cmp_alignment_desc") &&
-        ($_GET['sort'] != "cmp_ttl_asc") &&
-        ($_GET['sort'] != "cmp_ttl_desc") &&
-        ($_GET['sort'] != "cmp_pen_asc") &&
-        ($_GET['sort'] != "cmp_pen_desc") &&
-        ($_GET['sort'] != "cmp_lastlogin_asc") &&
-        ($_GET['sort'] != "cmp_lastlogin_desc") &&
-        ($_GET['sort'] != "cmp_created_asc") &&
-        ($_GET['sort'] != "cmp_created_desc") &&
-        ($_GET['sort'] != "cmp_idled_asc") &&
-        ($_GET['sort'] != "cmp_idled_desc") &&
-        ($_GET['sort'] != "cmp_user_asc") &&
-        ($_GET['sort'] != "cmp_user_desc") &&
-        ($_GET['sort'] != "cmp_online_asc") &&
-        ($_GET['sort'] != "cmp_online_desc") &&
-        ($_GET['sort'] != "cmp_uhost_asc") &&
-        ($_GET['sort'] != "cmp_uhost_desc") &&
-        ($_GET['sort'] != "cmp_sum_asc") &&
-        ($_GET['sort'] != "cmp_sum_desc"))) $_GET['sort'] = "cmp_level_desc";
-    usort($file,$_GET['sort']);
+    $sort="cmp_level_desc";
+    if (isset($_GET['sort'])){
+      if
+        (($_GET['sort'] == "cmp_level_asc") ||
+        ($_GET['sort'] == "cmp_level_desc") ||
+        ($_GET['sort'] == "cmp_isadmin_asc") ||
+        ($_GET['sort'] == "cmp_isadmin_desc") ||
+        ($_GET['sort'] == "cmp_alignment_asc") ||
+        ($_GET['sort'] == "cmp_alignment_desc") ||
+        ($_GET['sort'] == "cmp_ttl_asc") ||
+        ($_GET['sort'] == "cmp_ttl_desc") ||
+        ($_GET['sort'] == "cmp_pen_asc") ||
+        ($_GET['sort'] == "cmp_pen_desc") ||
+        ($_GET['sort'] == "cmp_lastlogin_asc") ||
+        ($_GET['sort'] == "cmp_lastlogin_desc") ||
+        ($_GET['sort'] == "cmp_created_asc") ||
+        ($_GET['sort'] == "cmp_created_desc") ||
+        ($_GET['sort'] == "cmp_idled_asc") ||
+        ($_GET['sort'] == "cmp_idled_desc") ||
+        ($_GET['sort'] == "cmp_user_asc") ||
+        ($_GET['sort'] == "cmp_user_desc") ||
+        ($_GET['sort'] == "cmp_online_asc") ||
+        ($_GET['sort'] == "cmp_online_desc") ||
+        ($_GET['sort'] == "cmp_uhost_asc") ||
+        ($_GET['sort'] == "cmp_uhost_desc") ||
+        ($_GET['sort'] == "cmp_sum_asc") ||
+        ($_GET['sort'] == "cmp_sum_desc")) {
+          $sort = $_GET['sort'];
+        }
+    }
+    usort($file,$sort);
 ?>
     <table border=1 cellpadding=2 cellspacing=2 cols="32" rows="<?php print count($file); ?>">
       <tr>
@@ -209,7 +214,7 @@
       $class = str_replace(">","&gt;",$class);
       $user = str_replace(">","&gt;",$user);
       $sum = 0;
-      foreach ($item as $k => $v) $sum += $v;
+      foreach ($item as $k => $v) $sum += intval($v);
       $pentot = 0;
       foreach ($pen as $k => $v) $pentot += $v;
       echo "      <tr>\n".
