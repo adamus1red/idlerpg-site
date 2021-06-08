@@ -9,9 +9,13 @@ $player = "";
 if (isset($_GET['player'])) {
     $player = substr($_GET['player'], 0, 30);
 } else {
-    header('Location: http://' . $_SERVER['SERVER_NAME'] .
+    if(isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_PORT'])) {
+        header('Location: http://' . $_SERVER['SERVER_NAME'] .
         ($_SERVER['SERVER_PORT'] != 80 ? ':' . $_SERVER['SERVER_PORT'] : '') . $BASEURL .
         'players.php');
+    } else {
+        header('Location: ' . $net_url);
+    }
 }
 $file = fopen($irpg_db, "r");
 fgets($file, 1024); // skip top comment
