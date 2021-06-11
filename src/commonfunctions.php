@@ -87,8 +87,8 @@
         list(,,,,,,,,,,,,,,,,,,,,,$i2[0],$i2[1],$i2[2],$i2[3],$i2[4],$i2[5],
         $i2[6],$i2[7],$i2[8],$i2[9])=explode("\t",trim($b));
         $s1 = $s2 = 0;
-        foreach ($i1 as $item) { $s1 += $item; }
-        foreach ($i2 as $item) $s2 += $item;
+        foreach ($i1 as $item) { $s1 += intval($item); }
+        foreach ($i2 as $item) $s2 += intval($item);
         return ($s1 > $s2) ? -1 : 1;
     }
 ?>
