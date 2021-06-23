@@ -73,7 +73,25 @@
 <?php
         $sum=0;
         foreach ($item as $key => $val) {
-            echo "        <$key>".intval($val)."</$key>\n";
+            if ($key == "helm" && substr($val,-1,1) == "a") {
+                echo "        <$key unique=\"Mattt's Omniscience Grand Crown\">".intval($val)."</$key>\n";
+            } elseif ($key == "tunic" && substr($val,-1,1) == "b") {
+                echo "        <$key unique=\"Res0's Protectorate Plate Mail\">".intval($val)."</$key>\n";
+            } elseif ($key == "amulet" && substr($val,-1,1) == "c") {
+                echo "        <$key unique=\"Dwyn's Storm Magic Amulet\">".intval($val)."</$key>\n";
+            } elseif ($key == "weapon" && substr($val,-1,1) == "d") {
+                echo "        <$key unique=\"Jotun's Fury Colossal Sword\">".intval($val)."</$key>\n";
+            } elseif ($key == "weapon" && substr($val,-1,1) == "e") {
+                echo "        <$key unique=\"Drdink's Cane of Blind Rage\">".intval($val)."</$key>\n";
+            } elseif ($key == "boots" && substr($val,-1,1) == "f") {
+                echo "        <$key unique=\"Mrquick's Magical Boots of Swiftness\">".intval($val)."</$key>\n";
+            } elseif ($key == "weapon" && substr($val,-1,1) == "g") {
+                echo "        <$key unique=\"Jeff's Cluehammer of Doom\">".intval($val)."</$key>\n";
+            } elseif ($key == "ring" && substr($val,-1,1) == "h") {
+                echo "        <$key unique=\"Juliet's Glorious Ring of Sparkliness\">".intval($val)."</$key>\n";
+            } else {
+                echo "        <$key>".intval($val)."</$key>\n";
+            }
             $sum += intval($val);
         }
         echo "        <total>$sum</total>\n";
