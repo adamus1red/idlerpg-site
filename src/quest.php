@@ -68,7 +68,7 @@
                 echo "        <p><b>Current goal:</b> [$p1[0],$p1[1]]</p>\n";
             }
             else {
-                echo "        <p><b>Current goal:</b> [$p2[0],$p2[1]]</p>>\n";
+                echo "        <p><b>Current goal:</b> [$p2[0],$p2[1]]</p>\n";
             }
         }
         echo "        <p><b>Participant 1:</b> <a href=\"playerview.php?player=".
