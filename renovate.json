@@ -1,18 +1,27 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     "docker:enableMajor"
   ],
   "packageRules": [
     {
-      "datasources": ["docker"],
-      "packageNames": ["php"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "php"
+      ],
       "versioning": "semver"
     },
     {
-      "updateTypes": ["minor","patch","pin","digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true
     }
   ],
-  "includeForks": true
+  "forkProcessing": "enabled"
 }
