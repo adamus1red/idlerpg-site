@@ -1,4 +1,4 @@
-FROM php:8-apache
+FROM php:8.0.12-apache
 
 LABEL maintainer="@adamus1red <noreply@example.com>" \
       org.label-schema.build-date="${BUILD_DATE}" \
