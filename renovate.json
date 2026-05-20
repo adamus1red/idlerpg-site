@@ -1,7 +1,6 @@
 {
   "extends": [
-    "config:recommended",
-    "docker:enableMajor"
+    "config:best-practices"
   ],
   "packageRules": [
     {
