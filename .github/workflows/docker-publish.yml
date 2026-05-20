@@ -42,58 +42,25 @@ jobs:
         with:
           install: true
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: |
+            adamus1red/idlerpg
+            ghcr.io/adamus1red/idlerpg
+          tags: |
+            type=schedule
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
+            type=ref,event=pr
+            type=sha
+            type=edge
+
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
-
-      - name: Prepare
-        id: prep
-        run: |
-          DOCKER_IMAGE=adamus1red/idlerpg
-          VERSION=edge
-          if [[ $GITHUB_REF == refs/tags/* ]]; then
-            VERSION=${GITHUB_REF#refs/tags/}
-          elif [[ $GITHUB_REF == refs/heads/* ]]; then
-            VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's#/+#-#g')
-          elif [[ $GITHUB_REF == refs/pull/* ]]; then
-            VERSION=pr-${{ github.event.number }}
-          fi
-          TAGS="${DOCKER_IMAGE}:${VERSION}"
-          if [[ ${GITHUB_REF#refs/heads/} == "${default_branch}" ]]; then
-            TAGS="$TAGS,${DOCKER_IMAGE}:latest"
-          fi
-          if [ "${{ github.event_name }}" = "push" ]; then
-            TAGS="$TAGS,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TAGS="${DOCKER_IMAGE}:${{ github.event.inputs.tag }}"
-          fi
-          echo ::set-output name=version::${VERSION}
-          echo ::set-output name=tags::${TAGS}
-          echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-
-      - name: Prepare
-        id: prep2
-        run: |
-          DOCKER_IMAGE=ghcr.io/adamus1red/idlerpg
-          VERSION=edge
-          if [[ $GITHUB_REF == refs/tags/* ]]; then
-            VERSION=${GITHUB_REF#refs/tags/}
-          elif [[ $GITHUB_REF == refs/heads/* ]]; then
-            VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's#/+#-#g')
-          elif [[ $GITHUB_REF == refs/pull/* ]]; then
-            VERSION=pr-${{ github.event.number }}
-          fi
-          TAGS="${DOCKER_IMAGE}:${VERSION}"
-          if [[ ${GITHUB_REF#refs/heads/} == "${default_branch}" ]]; then
-            TAGS="$TAGS,${DOCKER_IMAGE}:latest"
-          fi
-          if [ "${{ github.event_name }}" = "push" ]; then
-            TAGS="$TAGS,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TAGS="${DOCKER_IMAGE}:${{ github.event.inputs.tag }}"
-          fi
-          echo ::set-output name=version::${VERSION}
-          echo ::set-output name=tags::${TAGS}
-          echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 
       - name: Login to Docker Hub
         uses: docker/login-action@v4
@@ -114,9 +81,6 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.prep.outputs.tags }},${{ steps.prep2.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
           platforms: ${{ env.default_platforms }}
-          labels: |
-            org.opencontainers.image.source=${{ github.event.repository.html_url }}
-            org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-            org.opencontainers.image.revision=${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
