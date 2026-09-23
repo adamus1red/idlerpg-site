@@ -1,4 +1,4 @@
-FROM php:8-apache@sha256:f988b6749b43c04ed0ae73b5b53920d5afdb4b92707c730f1eae2c5d065e694d
+FROM php:8-apache@sha256:e7c4a78bc342384903c942f50329636cf9c9d0b1b51860065f443c048f260c43
 
 LABEL maintainer="@adamus1red <noreply@example.com>" \
       org.label-schema.build-date="${BUILD_DATE}" \
